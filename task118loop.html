@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    // only key show uppercase
+
+    // key :- this is key
+    // student[key]:-this is value
+
+    let student = {
+        firstname: 'vikash',
+        lastname: 'modi',
+        age: 25,
+
+    }
+    newobj = {}
+    for (let key in student) {
+        let store = key.toUpperCase()
+        newobj[store] = student[key]
+
+
+    }
+    console.log(newobj);
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr=['First Name','Last Name','Age','Gender'];
+    let arr2=['Vikash','Modi',25,'Male'];
+    let obj={
+
+    }
+    // let i=0
+    // do{
+    //     obj[arr[i]]=arr[i]
+    //     i++
+
+    // }while(i<arr.length)
+
+    let i=0
+    do{                           //nested loop
+        let j=0
+    do{
+        obj[arr[i]]=arr2[i]
+        j++
+
+    }while(j<arr2.length)
+        i++
+
+    }while(i<arr.length)
+    console.log(obj);
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Condition :- </h1>
+    <h1> only Small Alphabets and Numbers</h1>
+    <h1>only 1 @ and 1 .</h1>
+    <h1> Not allowed capital Alphabets</h1>
+
+</body>
+<script>
+    let email = 'mehul22@gmail.com'       // valid email =all condition are true and invalid =any one condition are false
+    let obj = {
+        small: '',
+        cap: '',
+        num: '',
+        special: ''
+    }
+    let spc1 = 0
+    let spc2 = 0
+    let space = 0
+
+
+    for (let i = 0; i < email.length; i++) {
+        if (email[i] >= 'a' && email[i] <= 'z') {
+            obj.small++
+
+        }
+        if (email[i] >= 'A' && email[i] <= 'Z') {
+            obj.cap++
+
+        }
+        if (email[i] > 0) {
+            obj.num++
+        }
+        if (email[i].includes("@") || email[i].includes('.')) {
+            obj.special++
+        }
+        if (email[i] == '@') {
+            spc1++
+
+        }
+        if (email[i] == '.') {
+            spc2++
+
+        }
+        if (email[i] == ' ') {
+            space++
+        }
+    }
+
+    if (obj.small > 0 && obj.cap == 0 && obj.num > 0 && spc1 == 1 && spc2 == 1 && space == 0) {
+        console.log('This Is Valid Email Id');
+    }
+    else {
+        console.log('This Is Invalid Email Id');
+    }
+    console.log(obj);
+    console.log(spc1);
+    console.log(spc2);
+
+</script>
+
+</html>

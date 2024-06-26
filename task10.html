@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="out1">
+    <input type="text" name="" id="out2">
+    <button onclick="liner()">Liner</button>
+    <button onclick="Reverse()">Reverse</button>
+    <div id="out3"></div>
+    <!--write your sentex in line to line and  revers your writing  -->
+    
+</body>
+
+<script>
+    function liner(){
+        let one=document.getElementById('out1').value;
+        let two=document.getElementById('out2').value;
+
+        document.getElementById('out3').innerHTML=one+'   '+two
+    }
+    function Reverse(){
+        let one1=document.getElementById('out1').value;
+        let two1=document.getElementById('out2').value;
+
+        document.getElementById('out3').innerHTML=two1+'   '+one1
+    }
+</script>
+</html>

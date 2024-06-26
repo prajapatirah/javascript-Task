@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let obj = {
+        office: 'Webilok',
+        python: {
+            fees: 50000,
+            student: ['Vikash 5000', 'hitesh 500000', 'Pankaj 12000', 'Mayank 20000'],
+
+        },
+        PHP: {
+            fees: 20000,
+            student: ['rajesh 20000', 'Vivek 150000', 'Nikhil 11000'],
+        },
+        Java: {
+            fees: 30000,
+            student: ['Nikhil 30000', 'Hitesh 150000', 'Sunil 8000', 'Dhaval 20000', 'Rahul 14000']
+        }
+    }
+    let obj2 = {
+        YES: []
+    }
+    for (let key in obj.python.student) {
+        let arr = obj.python.student[key].split(' ')
+
+        if (arr[1] < obj.python.fees) {
+            obj2.YES.push(arr[0] + "( Remaining  " + (obj.python.fees - arr[1]) + ' Out OF ' + obj.python.fees + ' /- )')
+        }
+        if (arr[1] == obj.python.fees) {
+            obj2.YES.push(arr[0]+' Total Fees Paid')
+        }
+        if (arr[1] > obj.python.fees) {
+            console.error(arr[0]+" Please Do't Pay Fees More Than "+obj.python.fees+' /-');
+        }
+        
+        // console.log(arr);
+    }
+
+    for (let key in obj.PHP.student) {
+        let arr2 = obj.PHP.student[key].split(' ')
+        // console.log(arr2);
+        if (arr2[1] < obj.PHP.fees) {
+            obj2.YES.push(arr2[0] + "( Remaning " + (obj.PHP.fees - arr2[1]) + ' Out Of ' + obj.PHP.fees + ' /- )')
+        }
+        if (arr2[1] == obj.PHP.fees) {
+            obj2.YES.push(arr2[0]+' Total Fees Paid')
+        }
+        if (arr2[1] > obj.python.fees) {
+            console.error(arr2[0]+" Please Do't Pay Fees More Than "+obj.PHP.fees+' /-');
+        }
+    }
+
+   for(let key in obj.Java.student){
+    let arr3=obj.Java.student[key].split(' ')
+    if(arr3[1]<obj.Java.fees){
+        obj2.YES.push(arr3[0] + "( Remaning " + (obj.Java.fees - arr3[1]) + ' Out Of ' + obj.Java.fees + ' /- )')
+
+
+    }
+    if (arr3[1] == obj.Java.fees) {
+            obj2.YES.push(arr3[0]+' Total Fees Paid')
+        }
+
+    if (arr3[1] > obj.python.fees) {
+            console.error(arr3[0]+" Please Do't Pay Fees More Than "+obj.Java.fees+' /-');
+        }
+   }
+    console.log(obj2);
+
+</script>
+
+</html>

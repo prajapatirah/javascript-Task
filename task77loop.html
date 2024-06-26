@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Let Arr</h2>
+    <span>[
+        [0,22,55,41,52,88,22,72,12,11,88],<br><br>[45,42,12,11,32,22,90,45,41],<br><br>[23,,45,32,45,80,90,88,12,11,45],<br><br>[45,22,23,45,45,41]
+        ]</span><br>
+
+    <button onclick="ab()">Enter Value</button>
+    <h1 id="out"></h1>
+    <h1 id="out2"></h1>
+
+
+</body>
+<script>
+    function ab() {
+
+        let arr = [[0, 22, 55, 41, 52, 88, 22, 72, 12, 11, 88], [45, 42, 12, 11, 32, 22, 90, 45, 41], [23, , 45, 32, 45, 80, 90, 88, 12, 11, 45], [45, 22, 23, 45, 45, 41]];
+
+        let pro = Number(prompt('Enter Value'));
+        let cal = 0
+        document.getElementById('out').innerHTML = 'Enter Number:-' + pro;
+
+        for (let i = 0; i < arr.length; i++) {
+
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == pro) {
+                    cal++
+
+                }
+            }
+
+        }
+        document.getElementById('out2').innerHTML = cal;
+
+
+    }
+
+</script>
+
+</html>

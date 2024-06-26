@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="0" id="table">
+        <tr>
+            <td>No</td>
+            <td>Name</td>
+            <td>Maths</td>
+            <td>Sci</td>
+            <td>Gujrati</td>
+            <td>Hindi</td>
+            <td>Total</td>
+            <td>Per(%)</td>
+        </tr>
+    </table><br>
+    <button onclick="ab()">Enter</button>
+    
+</body>
+<script>
+    function ab(){
+        let no=prompt('Enter Number')
+        let name=prompt('Enter Name')
+        let maths=Number(prompt('Enter marhs maks'))
+        let sci=Number(prompt('Enter Sci  maks'))
+        let guj=Number(prompt('Enter Guj  maks'))
+        let hi=Number(prompt('Enter Hindi  maksr'))
+        let arr=[]
+        arr.push(maths,sci,guj,hi)
+        console.log(arr);
+
+        let total=0
+        let per=0
+
+        arr.forEach(function(val){                                // task only use foreach loop for total
+            total+=val
+            per=total/arr.length
+
+        })
+        document.getElementById('table').innerHTML+=`<tr>
+            <td>`+no+`</td>
+            <td>`+name+`</td>
+            <td>`+maths+`</td>
+            <td>`+sci+`</td>
+            <td>`+guj+`</td>
+            <td>`+hi+`</td>
+            <td>`+total+`</td>
+            <td>`+per+' % '+`</td>
+            </tr>`
+
+
+
+        
+
+
+    }
+
+</script>
+</html>

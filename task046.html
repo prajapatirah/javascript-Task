@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="in">
+    <button onclick="ckey()">Click Here</button>
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1><br>
+    <h1 id="out3"></h1>
+    <h1 id="out4"></h1><br>
+    <h1 id="out5"></h1>
+    <h1 id="out6"></h1><br>
+    <h1 id="out7"></h1>
+    <h1 id="out8"></h1>
+
+</body>
+<script>
+    let s1 = 0
+    let s = ""
+
+    let A1 = 0
+    let A = ""
+
+    let n1 = 0
+    let num = ""
+
+    let alp = 0
+    let tosp = ''
+    function ckey() {
+        let store = document.getElementById('in').value;
+
+        if ((store >= "a") && (store <= "z")) {
+            s1 += store.length;//1
+            s += store;
+            document.getElementById('out1').innerHTML = "Total Small Alpha:- " + s1;
+            document.getElementById('out2').innerHTML = " Small Alpha:- " + s;
+
+        }
+
+        else if (store >= "A" && store <= "Z") {
+            A1 += store.length;//1
+            A += store;
+            document.getElementById('out3').innerHTML = "Total Cap Alpha:- " + A1;
+            document.getElementById('out4').innerHTML = "Cap Alpha:- " + A;
+
+        }
+        else if (store >= 0) {
+            n1 += store.length;//1
+            num += store;
+            document.getElementById('out5').innerHTML = "Total Number Alpha:- " + n1;
+            document.getElementById('out6').innerHTML = "Numbers Alpha:- " + num;
+
+        }
+         else {
+            alp+=store.length
+            tosp+=store;
+            document.getElementById('out7').innerHTML = "Total Spacial  Alpha:- " +alp ;
+            document.getElementById('out8').innerHTML = " Spacial  Alpha:- " +tosp ;
+        }
+    }
+</script>
+
+</html>

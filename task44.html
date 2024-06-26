@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//CSS.boost/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <table class="table table-hover table-striped ">
+            <tr>
+                <td>All Dipartments</td>
+                <td>First 100 Unit</td>
+                <td>Next 200 Unit</td>
+                <td> Above 200 Unit</td>
+            </tr>
+            <tr>
+                <td>UGVCL</td>
+                <td>FREE</td>
+                <td>RS.2per Unit</td>
+                <td>RS.5per Unit</td>
+            </tr>
+            <tr>
+                <td>MGVCL</td>
+                <td>FREE</td>
+                <td>RS.3per Unit</td>
+                <td>RS.7per Unit</td>
+            </tr>
+            <tr>
+                <td>SGVCL</td>
+                <td>FREE</td>
+                <td>RS.5per Unit</td>
+                <td>RS.9per Unit</td>
+            </tr>
+            <tr>
+                <td>PGVCL</td>
+                <td>FREE</td>
+                <td>RS.9per Unit</td>
+                <td>RS.12per Unit</td>
+            </tr>
+        </table>
+        <button class="btn btn-danger" onclick="make()">Enter Value</button><br>
+        <table class="table table-hover table-striped " id="table">
+            <tr>
+                <td>All Dipartments</td>
+                <td>Enter Your Unit</td>
+                <td>First 100 Unit</td>
+                <td>Next 200 Unit</td>
+                <td> Above 200 Unit</td>
+                <td>Final Total</td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="..//boostrap/jquery.slim.min.js"></script>
+    <script src="..//boostrap/popper.min.js"></script>
+    <script src="..//boostrap/bootstrap.min.js"></script>
+
+</body>
+<script>
+    function make() {
+        let dip = prompt('Enter Your Daipartment');
+        let unit = prompt('Enter Your Unit');
+        let free = 'FREE'
+        let next = ''
+        let above = ''
+        let final = ''
+
+        if (dip == "UGVCL") {
+            if (unit <= "100") {
+                next = "----"
+                above = "----"
+                final = "----"
+            }
+
+            else if (unit > 100 && unit <= 300) {
+                next = (unit - 100) * 2;
+                above = "---"
+                final = next
+            }
+            else if(unit>300 ){
+                next = 200*2;
+                above=(unit-300)*5
+                final = next+above
+            }
+        }
+        if (dip == "MSGVCL") {
+            if (unit <= "100") {
+                next = "----"
+                above = "----"
+                final = "----"
+            }
+
+            else if (unit > 100 && unit <= 300) {
+                next = (unit - 100) * 3;
+                above = "---"
+                final = next
+            }
+            else if(unit>300 ){
+                next = 200*3;
+                above=(unit-300)*7
+                final = next+above
+            }
+        }
+        if (dip == "SGVCL") {
+            if (unit <= "100") {
+                next = "----"
+                above = "----"
+                final = "----"
+            }
+
+            else if (unit > 100 && unit <= 300) {
+                next = (unit - 100) * 5;
+                above = "---"
+                final = next
+            }
+            else if(unit>300 ){
+                next = 200*5;
+                above=(unit-300)*9
+                final = next+above
+            }
+            if (dip == "PGVCL") {
+            if (unit <= "100") {
+                next = "----"
+                above = "----"
+                final = "----"
+            }
+
+            else if (unit > 100 && unit <= 300) {
+                next = (unit - 100) * 9;
+                above = "---"
+                final = next
+            }
+            else if(unit>300 ){
+                next = 200*9;
+                above=(unit-300)*12
+                final = next+above
+            }
+        }
+        }
+
+
+
+        document.getElementById('table').innerHTML += `<tr>
+            <td>`+ dip + `</td>
+            <td>`+ unit + `</td>
+            <td>`+ free + `</td>
+            <td>`+ next + `</td>
+            <td>`+ above + `</td>
+            <td>`+ final + `</td></tr>`
+
+
+
+    }
+</script>
+
+</html>

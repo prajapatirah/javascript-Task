@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mehul is great person</h1>
+    <button onclick="sta()">Check Starting World</button><br><br>
+    <button onclick="end()">Check ending World</button><br><br>
+    <button onclick="bre()">Check Brek World</button><br><br>
+    <button onclick="ind()">Check Index Number </button><br><br>
+    <button onclick="len()">Check Lenght World</button><br><br>
+    <button onclick="join()">Join  World</button><br><br>
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1>
+    <h1 id="out3"></h1>
+</body>
+<script>
+    function sta(){
+        let a=prompt('Enter Starting World');
+        let b="Mehul is great person"
+        document.getElementById('out1').innerHTML="Your World is:- "+a;
+        
+        if(b.startsWith(a)){
+            document.getElementById('out2').innerHTML="Yes.. This is Starting World in Sentence ..";
+        }
+        else{
+            document.getElementById('out2').innerHTML="No.. This is Not Starting World in Sentence ..";
+        }
+    }
+    function end(){
+        let a=prompt('Enter Ending World');
+        let b="Mehul is great person"
+        document.getElementById('out1').innerHTML="Your World is:- "+a;
+
+        if(b.endsWith(a)){
+            document.getElementById('out2').innerHTML="Yes.. This is Ending World in Sentence ..";
+
+        }
+        else{
+            document.getElementById('out2').innerHTML="No.. This is Not Ending World in Sentence ..";
+        }
+
+    }
+    function bre(){
+        let a=prompt('Enter Berak World');
+        let b="Mehul is great person"
+        console.log(b.split(a));
+    }
+    function ind(){
+        let a=prompt('Enter Index World Number');
+        let b="Mehul is great person";
+        document.getElementById('out1').innerHTML="Enter Number Of Index:-"+a;
+
+        if(b.charAt(a)){
+            document.getElementById('out2').innerHTML="Index Number:-"+b.charAt(a);
+        }
+        else{
+            document.getElementById('out2').innerHTML="Index Number is Not Avaleble In Sentence";
+        }
+
+    }
+    function len(){
+        let a=prompt('Enter Lenght World');
+        let b="Mehul is great person";
+        document.getElementById('out1').innerHTML="Enter World:-"+a;
+        if(b.includes(a)){
+        document.getElementById('out2').innerHTML="World Lenght is:-"+a.length;
+        }
+        else{
+        document.getElementById('out2').innerHTML="World is not avaleble in Sentence";
+
+        }
+    }
+    function join(){
+        let a=prompt('Enter Join  World');
+        let b="Mehul is great person";
+        document.getElementById('out1').innerHTML="Enter Join World:-"+a;
+        if(b.concat(a)){
+        document.getElementById('out2').innerHTML="Join Sentence:-"+b.concat(a);
+        }
+    }
+</script>
+</html>

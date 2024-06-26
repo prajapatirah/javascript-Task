@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="click">
+    <button onclick="make()">Click Here</button>
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1><br>
+    <h1 id="out3"></h1>
+    <h1 id="out4"></h1><br>
+    <h1 id="out5"></h1>
+    <h1 id="out6"></h1><br>
+    <h1 id="out7"></h1>
+    <h1 id="out8"></h1><br>
+
+
+</body>
+<script>
+    let to = 0
+    let abc = ""
+
+    let to1 = 0
+    let ABC = ""
+    
+
+    let num = ""
+    let to2 = 0
+
+    let sp = ""
+    let to3 = 0
+
+
+    function make() {
+        let store = document.getElementById('click').value;
+
+        if (store >= "a" && store <= "z") {
+            to += store.length;
+            abc += store;
+            document.getElementById('out1').innerHTML = "Total Small Alpha: " + to;
+            document.getElementById('out2').innerHTML = "Small Alpha: " + abc;
+        }
+
+        else if (store >= "A" && store <= "Z") {
+            to1 += 1;
+            ABC += store;
+
+            document.getElementById('out3').innerHTML = "Total Capital Alpha: " + to1;
+            document.getElementById('out4').innerHTML = "Cap Alpha: " + ABC;
+        }
+         else if (store > 0) {
+            num += store;
+            to2 += 1;
+            document.getElementById('out5').innerHTML = "Total Number: " + to2;
+            document.getElementById('out6').innerHTML = "Numbers: " + num;
+        }
+          else{
+             sp+=store;
+             to3+=1;
+             document.getElementById('out7').innerHTML="Total Spical : "+to3;
+             document.getElementById('out8').innerHTML="Spacial Char: "+sp;
+         }
+
+
+    }
+</script>
+
+</html>

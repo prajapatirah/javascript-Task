@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//CSS.boost/bootstrap.min.css">
+</head>
+<body>
+    <input type="text" name="" id="main" >
+    <button class="btn btn-danger" onclick="ab()">submit</button><br><br>
+
+    <div class="container">
+        <div class="row">
+            <div  class="col-1" style="border: 3px solid black ; height: 50px;"></div>
+            <div class="col-2" style="border: 3px solid black ; height: 50px;"></div>
+            <div class="col-4" style="border: 3px solid black ; height: 50px;"></div>
+            <div class="col-5" style="border: 3px solid black ; height: 50px;"></div>
+
+        </div>
+    </div>
+
+
+
+    <script src="..//boostrap/jquery.slim.min.js"></script>
+    <script src="..//boostrap/popper.min.js"></script>
+    <script src="..//boostrap/bootstrap.min.js"></script>
+    
+</body>
+<script>
+    
+    function ab(){
+        let val=document.querySelector('#main').value;
+        let spl=val.split(' ');
+        console.log(spl);
+        if(spl[0]=='col-1'){
+            document.querySelector('.col-1').innerHTML="<"+spl[1]+">"+spl[2]+"</"+spl[1]+">"
+
+        }
+        if(spl[0]=='col-2'){
+            document.querySelector('.col-2').innerHTML="<"+spl[1]+">"+spl[2]+"</"+spl[1]+">"
+
+        }
+        if(spl[0]=='col-4'){
+            document.querySelector('.col-4').innerHTML="<"+spl[1]+">"+spl[2]+"</"+spl[1]+">"
+
+        }
+        if(spl[0]=='col-5'){
+            document.querySelector('.col-5').innerHTML="<"+spl[1]+">"+spl[2]+"</"+spl[1]+">"
+
+        }
+
+    }
+
+</script>
+</html>

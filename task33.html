@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chek Tringle Is Valid Or Not By Angles:-</h1>
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1>
+    <h1 id="out3"></h1>
+    <button onclick="angle()">Enter Angles</button>
+    <h1 id="out4"></h1>
+
+    
+</body>
+<script>
+    function angle(){
+        let a=Number(prompt('Enter First Angles'));
+        let b=Number(prompt('Enter Second Angles'));
+        let c=Number(prompt('Enter Third Angles'));
+        total=a+b+c;
+
+        if(total==180){
+            document.getElementById('out1').innerHTML="First Angles ="+a;
+            document.getElementById('out2').innerHTML="First Angles ="+b;
+            document.getElementById('out3').innerHTML="First Angles ="+c;
+            document.getElementById('out4').innerHTML="This is valid Tringle Because the sum Of 3 Angles" +"("+a+"+"+b+"+"+c+"="+total+")"+ "+Are 180.."
+        }
+        else if(total!==180){
+            document.getElementById('out1').innerHTML="First Angles ="+a;
+            document.getElementById('out2').innerHTML="First Angles ="+b;
+            document.getElementById('out3').innerHTML="First Angles ="+c;
+            document.getElementById('out4').innerHTML="This is valid Not Tringle Because the sum Of 3 Angles" +"("+a+"+"+b+"+"+c+"="+total+")"+ "+Are."+total
+        }
+
+    }
+</script>
+</html>

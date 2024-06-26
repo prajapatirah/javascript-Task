@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="stor">
+    <button onclick="one()">mm to cm</button>
+    <button onclick="two()">cm to m</button>
+    <button onclick="four()">m to km</button>
+    <button onclick="five()">km to m</button>
+    <h1 id="output"></h1>
+
+
+
+<!-- how to convaret mm to cm ,cm to m,m to km and km to m. -->
+    
+</body>
+<script>
+    function one(){
+        let store=document.getElementById('stor').value
+
+        document.getElementById('output').innerHTML=store/10
+    }
+    function two(){
+        let store2=document.getElementById('stor').value
+
+        document.getElementById('output').innerHTML=store2/100
+    }
+   
+    function four(){
+        let store4=document.getElementById('stor').value
+
+        document.getElementById('output').innerHTML=store4/1000
+    }
+    function five(){
+        let store5=document.getElementById('stor').value
+
+        document.getElementById('output').innerHTML=store5*1000
+    }
+</script>
+</html>

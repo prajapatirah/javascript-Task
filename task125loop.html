@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // find higher and lower salary 
+    let obj = {
+        office: 'Webilok',
+        Employee: {
+            Vikash: 7000,
+            Mayank: 13000,
+            hitesh: 5000,
+            Pankaj: 12000,
+            Mukesh: 19000
+        },
+
+    }
+    let obj2 = {
+        Lower_Salary: [],
+        Higher_Salary: [],
+        Higher_Employee: [],
+        lover_Employee: [],
+        higher_Salary_Couting: [],
+        Lower_Salary_Couting: []
+
+
+    }
+    for (let key in obj.Employee) {
+        console.log(obj.Employee[key]);
+        if (obj.Employee[key] >= 10000) {
+            obj2.higher_Salary_Couting++
+            obj2.Higher_Salary.push(obj.Employee[key])
+            obj2.Higher_Employee.push(key)
+        }
+        if (obj.Employee[key] < 10000) {
+            obj2.Lower_Salary_Couting++
+            obj2.Lower_Salary.push(obj.Employee[key])
+            obj2.lover_Employee.push(key)
+        }
+    }
+    console.log(obj2);
+</script>
+
+</html>

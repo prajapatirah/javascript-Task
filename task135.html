@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Chenge value and backgroundColor -->
+
+    <div class="container">
+        <div class="child">Python</div>
+        <div class="child 1">C++</div>
+        <div class="child 2">Java</div>
+        <div class="child 3">Css</div>
+        <div class="child 4">PHP</div>
+    </div>
+    
+    
+</body>
+<script>
+
+
+    let val=document.querySelectorAll('.child')
+    
+    for(let i=0; i<val.length; i++){
+        val[i].style.color='green'
+        val[i].style.backgroundColor='orange' ;
+        val[i].innerHTML='Python'
+
+        
+    }
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // how much type string and number subtration
+    let arr=[['vikas',55,21,91],['hitesh',88,61,9],['raj',29,81,81],[742]];
+    let string=0
+    let numcount=0
+
+
+    let i=0
+    while(i<arr.length){
+        
+        let j=0
+        while(j<arr[i].length){
+            // console.log(arr[i][j]);
+            if(typeof arr[i][j]=="string"){
+                string++
+
+            }
+            if(typeof arr[i][j]=="number"){
+                numcount+=arr[i][j]
+
+            }
+            j++
+        }
+        i++
+    }
+    console.log(string);
+    console.log(numcount);
+
+</script>
+</html>

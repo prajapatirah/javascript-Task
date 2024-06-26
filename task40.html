@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mehul Prajapati is Great Person..</h1>
+    <button onclick="search()">Search Any Word</button><br><br>
+    <button onclick="rep()">Replace Word</button><br><br>
+    <button onclick="cap()">Capital Word</button><br><br>
+    <button onclick="find()">Find Index</button><br><br>
+    <button onclick="repeat()">Repeat</button><br><br>
+    <button onclick="slice()">Slice</button><br><br>
+    
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1>
+    <h1 id="out3"></h1>
+
+</body>
+<script>
+    function search(){
+      let  a=prompt('E;nter Search Word')
+           b="Mehul Prajapati is Great Person..";
+        document.getElementById('out1').innerHTML="Your Enter Word Is:-"+'<span style="color: red;">'+a+'</span>';
+
+        if(b.includes(a)){
+            document.getElementById('out2').innerHTML="Yes..This is Availble In Sentence..";
+        }
+        else{
+            document.getElementById('out2').innerHTML="no..This is Not Availble In Sentence..";
+        }
+    }
+    function rep(){
+        let first=prompt('Inter Replace Word');
+        let second=prompt('Inter New Word');
+        c="Mehul Prajapati is Great Person..";
+        document.getElementById('out1').innerHTML="Intered Word= "+first
+        document.getElementById('out2').innerHTML="Intere New Word ="+second
+
+        if(c.includes(first)){
+            dcc=c.replace(first,second);
+            document.getElementById('out3').innerHTML=dcc;
+
+        }
+        else{
+            document.getElementById('out3').innerHTML="This Word Is Not Avaleble In Sentence"
+        }
+    }
+    function cap(){
+        let one=prompt('Enter Word');
+       let cg="Mehul Prajapati is Great Person..";
+
+        document.getElementById('out1').innerHTML="Enter Small Word="+one;
+        if(cg.includes(one)){
+            cc=one.toUpperCase()
+        document.getElementById('out2').innerHTML="Traffered Word"+cc;
+
+        }
+        else{
+        document.getElementById('out2').innerHTML="Not Avaleble In Sentence ";
+        }
+    }
+    function find(){
+        let two=prompt('Enter Find Word')
+        document.getElementById('out1').innerHTML="Type Search="+two;
+       let kk="Mehul Prajapati is Great Person..";
+       store=kk.indexOf(two)
+       document.getElementById('out2').innerHTML="Index="+store;
+
+    }
+    function repeat(){
+        let so=prompt('Enter Repeat Type');
+       let hq="Mehul Prajapati is Great Person..";
+       document.getElementById('out1').innerHTML="Enter Type Replace"+so;
+       bb=hq.repeat(so);
+       document.getElementById('out2').innerHTML=bb;
+    }
+
+    function slice(){
+        let we=prompt('Enter First Word');
+        let you=prompt('Enter Second Word');
+       let po="Mehul Prajapati is Great Person..";
+       document.getElementById('out1').innerHTML="Enter Number for Word= "+we+","+you;
+
+       if(po.slice(we,you)){
+       document.getElementById('out2').innerHTML="Slicce Word= "+po.slice(we,you);
+
+
+       }
+
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let str = "444 + 555";
+
+    let arr = str.split(' ')
+    let ans = [];
+
+    if (arr[1] == "/") {
+        let division = arr[0] / arr[2]
+        ans.push(division)
+    }
+    if (arr[1] == "*") {
+        let mul = arr[0] * arr[2]
+        ans.push(mul)
+    }
+    if (arr[1] == "+") {
+        let division = Number(arr[0]) + Number(arr[2])
+        ans.push(division)
+    }
+    if (arr[1] == "-") {
+        let division = arr[0] - arr[2]
+        ans.push(division)
+    }
+
+
+    console.log(ans);
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

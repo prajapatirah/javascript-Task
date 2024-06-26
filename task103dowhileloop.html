@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // divided Odd And Even length in a index ans show index
+    
+    let arr = ['Php', 'Laravel', 'Python', 'c++', 'SQL', 'vikash'];
+    let ans=[];
+    let ans2=[];
+
+    let i = 0
+
+
+    do {
+        if (arr[i].length % 2 == 0) {
+            ans.push(arr[i]+arr[i].length)
+        }
+        if (arr[i].length % 2 != 0) {
+            ans2.push(arr[i]+arr[i].length)
+        }
+        i++
+
+    } while (i < arr.length)
+    console.log('Even Length',ans);
+    console.log('Odd Length',ans2);
+
+</script>
+
+</html>

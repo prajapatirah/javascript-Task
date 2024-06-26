@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css boost/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h3 class="card-title ">Enter Any 2 Value in input Box & Check Which Number Is Positive And Negetive..
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label for=""><b>Enter Your <br> Value:-</b></label><br>
+                        <input type="text" name="" id="input">
+                    </div>
+                    <div class="col-6">
+                        <h2 id="out1"></h2>
+                        <h2 id="out2"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-secondary">
+                <button class="btn btn-danger" onclick="show()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="..//boost/jquery.slim.min.js"></script>
+    <script src="..//boost/popper.min.js"></script>
+    <script src="..//boost/bootstrap.min.js"></script>
+</body>
+<script>
+    function show() {
+        let store = document.getElementById('input').value;
+        let arr = store.split(',');
+
+        if (arr[0] > 0 && arr[1] > 0) {
+            document.getElementById('out1').innerHTML = 'First Value = ' + arr[0] + ' (This Is Positive)';
+
+            document.getElementById('out2').innerHTML = 'Second Value = ' + arr[1] + '(This Is Positive)';
+        }
+        if (arr[0] < 0 && arr[1] < 0) {
+            document.getElementById('out1').innerHTML = 'First Value = ' + arr[0] + ' (This Is Nagetive)';
+
+            document.getElementById('out2').innerHTML = 'Second Value = ' + arr[1] + '   (This Is Negetive)';
+        }
+        if (arr[0] > 0 && arr[1] < 0) {
+            document.getElementById('out1').innerHTML = 'First Value = ' + arr[0] + ' (This Is Positive)';
+
+            document.getElementById('out2').innerHTML = 'Second Value = ' + arr[1] + '   (This Is Negetive)';
+        }
+        if (arr[0] < 0 && arr[1] > 0) {
+            document.getElementById('out1').innerHTML = 'First Value = ' + arr[0] + ' (This Is Negetive)';
+
+            document.getElementById('out2').innerHTML = 'Second Value = ' + arr[1] + ' (This Is Poitive)';
+        }
+        if (arr[0] == 0 && arr[1] == 0) {
+            document.getElementById('out1').innerHTML = 'First Value = ' + arr[0] + '    (This Is Zero)';
+
+            document.getElementById('out2').innerHTML = 'Second Value = ' + arr[1] +' (This Is Zero)';
+        }
+
+
+
+    }
+
+</script>
+
+</html>

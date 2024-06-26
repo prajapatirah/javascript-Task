@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--write marks in table it atomatecally show total and percentag -->
+    <fieldset>
+        <legend style="text-align: center; background-color: black; color: aliceblue;">STUDENTS MARKSITE</legend>
+        <table border="1" cellspacing="0" cellpadding="3">
+            <tr>
+                <th rowspan="2">NO.</th>
+                <th rowspan="2">NAME</th>
+                <th colspan="3">SUBJECT</th>
+                <th colspan="2">RESULT</th>
+            </tr>
+            <tr>
+                <th>MATHS</th>
+                <th>CHEMSTRY</th>
+                <th>PHYSIC</th>
+                <th>TOTAL</th>
+                <th>PERCENTAGE(%)</th>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <th>Vikash Modi</th>
+                <th><input type="text" name="" id="one1"></th>
+                <th><input type="text" name="" id="one2"></th>
+                <th><input type="text" name="" id="one3"></th>
+                <th><input type="text" name="" id="one4"></th>
+                <th><input type="text" name="" id="one5"></th>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <th>Chirag Galchar</th>
+                <th><input type="text" name="" id="one6"></th>
+                <th><input type="text" name="" id="one7"></th>
+                <th><input type="text" name="" id="one8"></th>
+                <th><input type="text" name="" id="one9"></th>
+                <th><input type="text" name="" id="one10"></th>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <th>Mukesh Patel</th>
+                <th><input type="text" name="" id="one11"></th>
+                <th><input type="text" name="" id="one12"></th>
+                <th><input type="text" name="" id="one13"></th>
+                <th><input type="text" name="" id="one14"></th>
+                <th><input type="text" name="" id="one15"></th>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <th>Rajesh Modi</th>
+                <th><input type="text" name="" id="one16"></th>
+                <th><input type="text" name="" id="one17"></th>
+                <th><input type="text" name="" id="one18"></th>
+                <th><input type="text" name="" id="one19"></th>
+                <th><input type="text" name="" id="one20"></th>
+            </tr>
+            <tr>
+                <th>5.</th>
+                <th>Ramesh Nai</th>
+                <th><input type="text" name="" id="one21"></th>
+                <th><input type="text" name="" id="one22"></th>
+                <th><input type="text" name="" id="one23"></th>
+                <th><input type="text" name="" id="one24"></th>
+                <th><input type="text" name="" id="one25"></th>
+            </tr>
+            <tr>
+                <th>6.</th>
+                <th>Kamlesh</th>
+                <th><input type="text" name="" id="one26"></th>
+                <th><input type="text" name="" id="one27"></th>
+                <th><input type="text" name="" id="one28"></th>
+                <th><input type="text" name="" id="one29"></th>
+                <th><input type="text" name="" id="one30"></th>
+            </tr>
+            <tr>
+                <th>7.</th>
+                <th>Nirav</th>
+                <th><input type="text" name="" id="one31"></th>
+                <th><input type="text" name="" id="one32"></th>
+                <th><input type="text" name="" id="one33"></th>
+                <th><input type="text" name="" id="one34"></th>
+                <th><input type="text" name="" id="one35"></th>
+            </tr>
+            <tr>
+                <th>8.</th>
+                <th>Jay</th>
+                <th><input type="text" name="" id="one36"></th>
+                <th><input type="text" name="" id="one37"></th>
+                <th><input type="text" name="" id="one38"></th>
+                <th><input type="text" name="" id="one39"></th>
+                <th><input type="text" name="" id="one40"></th>
+            </tr>
+            <tr>
+                <th>9.</th>
+                <th>Dhavl</th>
+                <th><input type="text" name="" id="one41"></th>
+                <th><input type="text" name="" id="one42"></th>
+                <th><input type="text" name="" id="one43"></th>
+                <th><input type="text" name="" id="one44"></th>
+                <th><input type="text" name="" id="one45"></th>
+            </tr>
+            <tr>
+                <th>10.</th>
+                <th>Alpesh</th>
+                <th><input type="text" name="" id="one46"></th>
+                <th><input type="text" name="" id="one47"></th>
+                <th><input type="text" name="" id="one48"></th>
+                <th><input type="text" name="" id="one49"></th>
+                <th><input type="text" name="" id="one50"></th>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: center;"><button onclick="make()">Submit</button></td>
+            </tr>
+        </table>
+
+    </fieldset>
+    
+</body>
+
+<script>
+
+function make(){
+    let a=Number(document.getElementById('one1').value);
+    let b=Number(document.getElementById('one2').value);
+    let c=Number(document.getElementById('one3').value);
+
+    document.getElementById('one4').value=a+b+c;
+    document.getElementById('one5').value=(a+b+c)/3;
+
+    let d=Number(document.getElementById('one6').value);
+    let e=Number(document.getElementById('one7').value);
+    let f=Number(document.getElementById('one8').value);
+
+    document.getElementById('one9').value=d+e+f;
+    document.getElementById('one10').value=(d+e+f)/3;
+
+    let g=Number(document.getElementById('one11').value);
+    let h=Number(document.getElementById('one12').value);
+    let i=Number(document.getElementById('one13').value);
+
+    document.getElementById('one14').value=g+h+i;
+    document.getElementById('one15').value=(g+h+i)/3;
+
+    let j=Number(document.getElementById('one16').value);
+    let k=Number(document.getElementById('one17').value);
+    let l=Number(document.getElementById('one18').value);
+
+    document.getElementById('one19').value=j+k+l;
+    document.getElementById('one20').value=(j+k+l)/3;
+
+    let m=Number(document.getElementById('one21').value);
+    let n=Number(document.getElementById('one22').value);
+    let o=Number(document.getElementById('one23').value);
+
+    document.getElementById('one24').value=m+n+o;
+    document.getElementById('one25').value=(m+n+o)/3;
+
+    let p=Number(document.getElementById('one26').value);
+    let q=Number(document.getElementById('one27').value);
+    let r=Number(document.getElementById('one28').value);
+
+    document.getElementById('one29').value=p+q+r;
+    document.getElementById('one30').value=(p+q+r)/3;
+
+    let s=Number(document.getElementById('one31').value);
+    let t=Number(document.getElementById('one32').value);
+    let u=Number(document.getElementById('one33').value);
+
+    document.getElementById('one34').value=s+t+u;
+    document.getElementById('one35').value=(s+t+u)/3;
+
+    let w=Number(document.getElementById('one36').value);
+    let x=Number(document.getElementById('one37').value);
+    let y=Number(document.getElementById('one38').value);
+
+    document.getElementById('one39').value=w+x+y;
+    document.getElementById('one40').value=(w+x+y)/3;
+
+    let a1=Number(document.getElementById('one41').value);
+    let a2=Number(document.getElementById('one42').value);
+    let a3=Number(document.getElementById('one43').value);
+
+    document.getElementById('one44').value=a1+a2+a3;
+    document.getElementById('one45').value=(a1+a2+a3)/3;
+
+    let a4=Number(document.getElementById('one46').value);
+    let a5=Number(document.getElementById('one47').value);
+    let a6=Number(document.getElementById('one48').value);
+
+    document.getElementById('one49').value=a4+a5+a6;
+    document.getElementById('one50').value=(a4+a5+a6)/3;
+    
+
+}
+
+</script>
+</html>

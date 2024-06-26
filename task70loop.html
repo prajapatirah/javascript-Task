@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr=[23,55,45,'vikas',true,56,false,11,false,456,56,68681,'jklfnt'];
+    let arr2=[233,9,43,'mukesh',true,56,false,21,false,4506,true,'sfdoikuoisreutoirseytver'];
+
+    let num=[];
+    let bool=[];
+    let str=[];
+
+    for(let i=0; i<arr.length; i++)
+    {
+        if(typeof arr[i]=='number')
+        {
+            num.push(arr[i])
+        }
+        if(typeof arr[i]=='string')
+        {
+            str.push(arr[i])
+        }
+        if(typeof arr[i]=='boolean')
+        {
+            bool.push(arr[i])
+        }
+        
+    }
+
+    for(let i=0; i<arr2.length; i++)
+    {
+        if(typeof arr2[i]=='number')
+        {
+            num.push(arr2[i])
+        }
+        if(typeof arr2[i]=='string')
+        {
+            str.push(arr2[i])
+        }
+        if(typeof arr2[i]=='boolean')
+        {
+            bool.push(arr2[i])
+        }
+        
+    }
+    
+console.log(num);
+console.log(bool);
+console.log(str);
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // find odd and evan Number
+    let arr = [
+        [22, 33, 42, 12],
+        [21, 88, 92, 19],
+        [22, 43, 56, 11],
+        [20, 5, 57, 12, 66]
+    ];
+    let odd = [];
+    let even = [];
+
+    arr.forEach(function (val) {
+        val.forEach(function (val2) {
+            if (val2 % 2 == 0) {
+                even.push(val2)
+            }
+            if (val2 % 2 != 0) {
+                odd.push(val2)
+            }
+        })
+    })
+    console.log('Even', even);
+    console.log('Odd', odd);
+
+
+</script>
+
+</html>

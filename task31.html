@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="store1">
+    <input type="number" name="" id="store2">
+    <input type="number" name="" id="store3">
+    <button onclick="cal()">Calculate</button>
+    <h1 id="out"></h1>
+
+    
+</body>
+<script>
+    function cal(){
+        let a=Number(document.getElementById('store1').value);
+        let b=Number(document.getElementById('store2').value);
+        let c=Number(document.getElementById('store3').value);
+
+        if(a>(b&&c)){
+            document.getElementById('out').innerHTML=a;
+        }
+        else if(b>(a&&c)){
+            document.getElementById('out').innerHTML=b;
+        }
+        else if(c>(a&&b)){
+            document.getElementById('out').innerHTML=c;
+        }
+        else{
+            document.getElementById('out').innerHTML="Same Number"
+        }
+
+    }
+</script>
+</html>

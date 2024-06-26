@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+        }
+       
+        #come{
+            margin-left: 275px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- write a number in input one ,two and three this number is divaded   it position inline -->
+    <div>
+    <input type="text" name="" id="first">
+    <input type="text" name="" id="first1" style="margin-left:200px ;">
+    <input type="text" name="" id="first2" style="margin-left:200px ;">
+</div>
+
+    <div>
+        <table border="1" cellspacing="1" cellpadding="20">
+            <tr>
+                <td>a</td>
+                <td id="output"></td>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td id="output3"></td>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td id="output6"></td>
+            </tr>
+        </table>
+        <table border="1" cellspacing="1" cellpadding="20" id="come">
+            <tr>
+                <td>a</td>
+                <td id="output1"></td>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td id="output4"></td>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td id="output7"></td>
+            </tr>
+        </table>
+        <table border="1" cellspacing="1" cellpadding="20" id="come">
+            <tr>
+                <td>a</td>
+                <td id="output2"></td>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td id="output5"></td>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td id="output8"></td>
+            </tr>
+        </table>
+    </div>
+    <button onclick="sow()">display</button>
+
+</body>
+<script>
+
+    function sow(){
+
+        let store =document.getElementById('first').value;
+        document.getElementById('output').innerHTML=store;
+        document.getElementById('output1').innerHTML=store;
+        document.getElementById('output2').innerHTML=store;
+
+        let store1=document.getElementById('first1').value;
+        document.getElementById('output3').innerHTML=store1;
+        document.getElementById('output4').innerHTML=store1;
+        document.getElementById('output5').innerHTML=store1;
+
+        let store2=document.getElementById('first2').value;
+        document.getElementById('output6').innerHTML=store2;
+        document.getElementById('output7').innerHTML=store2;
+        document.getElementById('output8').innerHTML=store2;
+
+
+
+    }
+
+
+
+</script>
+
+</html>

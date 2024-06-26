@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let num=123456789;
+
+    let obj={
+        '0':0,
+        '1':0,
+        '2':0,
+        '3':0,
+        '4':0,
+        '5':0,
+        '6':0,
+        '7':0,
+        '8':0,
+        '9':0,
+
+    }
+    let str=num.toString()
+    let arr=str.split('')
+    console.log(arr);
+
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]==0){
+            obj['0']++
+        }
+        if(arr[i]==1){
+            obj['1']++
+        }
+        if(arr[i]==2){
+            obj['2']++
+        }
+        if(arr[i]==3){
+            obj['3']++
+        }
+        if(arr[i]==4){
+            obj['4']++
+        }
+        if(arr[i]==5){
+            obj['5']++
+        }
+        if(arr[i]==6){
+            obj['6']++
+        }
+        if(arr[i]==7){
+            obj['7']++
+        }
+        if(arr[i]==8){
+            obj['8']++
+        }
+        if(arr[i]==9){
+            obj['9']++
+        }
+    }
+    console.log(obj);
+</script>
+</html>

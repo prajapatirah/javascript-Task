@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--how to start total and percentage in result  -->
+    <table border="1">
+        <tr>
+            <td>MATHS</td>
+            <td>SCIENCE</td>
+            <td>GUJRATI</td>
+            <td>HINDI</td>
+            <td>P.T</td>
+            <td>ENGLISH</td>
+        </tr>
+        <tr>
+            <td><input type="text" name="" id="first"></td>
+            <td><input type="text" name="" id="first1"></td>
+            <td><input type="text" name="" id="first2"></td>
+            <td><input type="text" name="" id="first3"></td>
+            <td><input type="text" name="" id="first4"></td>
+            <td><input type="text" name="" id="first5"></td>
+        </tr>
+    </table> <br><br>
+    <table border="1" cellspacing="1" cellpadding="20">
+        <tr>
+            <td>TOTAL</td>
+            <td>PERCENTAGE(%)</td>
+        </tr>
+        <tr>
+            <td id="store"></td>
+            <td id="store1"></td>
+        </tr>
+    </table>
+    <button onclick="set()">Submit</button>    
+</body>
+
+<script>
+
+function set(){
+
+    let click=Number(document.getElementById('first').value);
+    let click1=Number(document.getElementById('first1').value);
+    let click2=Number(document.getElementById('first2').value);
+    let click3=Number(document.getElementById('first3').value);
+    let click4=Number(document.getElementById('first4').value);
+    let click5=Number(document.getElementById('first5').value);
+
+    document.getElementById('store').innerHTML=click+click1+click2+click3+click4+click5
+
+    document.getElementById('store1').innerHTML=(click+click1+click2+click3+click4+click5)/6
+
+}
+
+</script>
+
+</html>

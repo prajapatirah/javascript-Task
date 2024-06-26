@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- write your number and show data -->
+    <input type="text" name="" id="out">
+    <input type="text" name="" id="put">
+    <button onclick="first()">a+=b</button>
+    <button onclick="second()">a-=b</button>
+    <button onclick="third()">b-=b</button>
+    <button onclick="forth()">a*=b</button>
+    <button onclick="five()">a/=b</button>
+    <button onclick="six()">a%=b</button>
+    <button onclick="seven()">b**=a</button>
+    <div id="show"></div>
+
+
+    
+</body>
+<script>
+    function first(){
+        let a=Number(document.getElementById('out').value)
+        let b=Number(document.getElementById('put').value)
+
+        document.getElementById('show').innerHTML="a=a+b=   "+(a+b)
+    }
+    function second(){
+        let c=Number(document.getElementById('out').value)
+        let d=Number(document.getElementById('put').value)
+
+        document.getElementById('show').innerHTML="a=a-b    =   "+(c-d)
+    }
+    function third(){
+        let e=Number(document.getElementById('out').value)
+        let f=Number(document.getElementById('put').value)
+
+        document.getElementById('show').innerHTML="b=b-b=   "+(e-e)
+    }
+    function forth(){
+        let g=Number(document.getElementById('out').value)
+        let h=Number(document.getElementById('put').value)
+
+        document.getElementById('show').innerHTML="a=a*b=   "+(g*h)
+    }
+    function five(){
+        let i=Number(document.getElementById('out').value)
+        let j=Number(document.getElementById('put').value)
+
+        document.getElementById('show').innerHTML="a=a/b=   "+(i/j)
+    }
+    function six(){
+        let k=Number(document.getElementById('out').value)
+        let l=Number(document.getElementById('put').value)
+
+        document.getElementById('show').innerHTML="a=a%b=   "+(k%l)
+    }
+    function seven(){
+        let n=Number(document.getElementById('out').value)
+        let m=Number(document.getElementById('put').value)
+
+        document.getElementById('show').innerHTML="b=b**a=   "+(m**n)
+    }
+</script>
+</html>

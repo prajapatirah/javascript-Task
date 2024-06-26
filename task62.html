@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let obj={
+        maths:10,
+        hindi:18,
+        guj:593,
+        sci:47,
+        ss:56,
+        total:'',
+        per:'',
+        result:'',
+        alert:''
+    }
+    obj['total']=obj.maths+obj.hindi+obj.guj+obj.sci+obj.sci+obj.ss
+
+    obj['per']=obj.total/5
+
+    if(obj['per']>=33){
+        obj.result='pass'
+    }
+     if(obj['per']<33){
+        obj.result='Fail'
+    }
+    if(obj['total']>500){
+        obj.alert='Invalid'
+        obj.result=''
+        obj.per=''
+
+      
+
+
+    }
+    console.log(obj);
+
+
+
+</script>
+</html>

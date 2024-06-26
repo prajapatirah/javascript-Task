@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ab()">Table creator machine</button>
+    
+</body>
+<script>
+    function ab(){
+        let row=prompt('Enter Rows');
+        let coll=prompt('Enter Colls');
+        let border=prompt('Enter Border');
+        let cellspacing=prompt('Enter Cellspacing');
+        let cellpadding=prompt('Enter Cellpadding');
+
+
+        let newborder=border.split(' ');
+
+        let val=document.querySelector('body');
+        let elm=document.createElement('table');
+
+        elm.setAttribute('border',newborder[0])
+        elm.setAttribute('style','border-color:'+newborder[1])
+        elm.setAttribute('cellspacing',cellspacing)
+        elm.setAttribute('cellpadding',cellpadding)
+
+
+        for(let i=0; i<=row; i++){
+            let tr=document.createElement('tr')
+
+            elm.appendChild(tr)
+            val.appendChild(elm)
+
+            for(let j=0; j<=coll; j++){
+                let td=document.createElement('td')
+                tr.appendChild(td)
+                elm.appendChild(tr)
+                val.appendChild(elm)
+
+            }
+        }
+
+
+
+
+    }
+
+</script>
+</html>

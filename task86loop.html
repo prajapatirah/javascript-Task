@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // divaded capitals world and small word and space
+    let str = 'Success Is An Journey Not A Destination';
+    let cap = '';
+    let small = '';
+
+
+    i = 0
+    while (i < str.length) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            cap += str[i]
+
+        }
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            small += str[i]
+
+        }
+        cap += ' '
+        small += ' '
+
+        i++
+
+    }
+    console.log(cap);
+    console.log(small);
+
+
+</script>
+
+</html>

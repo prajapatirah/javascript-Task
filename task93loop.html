@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Numbers whose sum is 100
+    let arr=[25,34,50,50,70];
+    let arr2=[40,13,50,75,75,30];
+
+    let i=0
+    while(i<arr.length){
+        
+        let j=0
+        while(j<arr2.length){
+            if(arr[i]+arr2[j]==100){
+                document.write(arr[i], arr2[j],"<br>")
+            }
+            j++
+        }
+        
+        
+        i++
+    }
+</script>
+</html>

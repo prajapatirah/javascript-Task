@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Discount</legend>
+        <label for="">Orginal Price</label>
+        <input type="number" name="" id="store1"><br><br>
+        <label for="">Selling Price</label>
+        <input type="number" name="" id="store2"><br><br>
+        <button onclick="chek()">Submit</button><br><br>
+        <b>Profit /Loss:-</b><br>
+        <h1 id="out"></h1>
+    </fieldset>
+    
+</body>
+<script>
+    function chek(){
+        let a=document.getElementById('store1').value 
+        let b=document.getElementById('store2').value 
+
+        if(a<b){
+            document.getElementById('out').innerHTML="You are in profit .. profit value is"+(b-a)
+        }
+        else if(a>b){
+            document.getElementById('out').innerHTML="You are in Loss .. Loss value is"+(a-b)
+        }
+        else{
+            document.getElementById('out').innerHTML="You are in not profit/Loss."
+        }
+    }
+</script>
+</html>

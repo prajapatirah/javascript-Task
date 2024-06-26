@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input with crieate calulater  -->
+    
+    <input type="text" name="" id="input1">
+    <input type="text" name="" id="input2">
+
+    <button onclick="add()">Addition(+)</button>
+    <button onclick="sub()"> Subtraction(-)</button>
+    <button onclick="div()">division(/)</button>
+    <button onclick="mul()">multiplication(*)</button>
+
+    <h1 id="out"></h1>
+</body>
+
+<script>
+
+function add(){
+     
+    let one=Number(document.getElementById('input1').value);
+    let two=Number(document.getElementById('input2').value);
+
+     document.getElementById('out').innerHTML="Addition ="+(one+two)
+}
+
+function sub(){
+    let three=Number(document.getElementById('input1').value);
+    let four=Number(document.getElementById('input2').value);
+
+    document.getElementById('out').innerHTML="Subtraction= "+(three-four)
+}
+function div(){
+    let five=Number(document.getElementById('input1').value);
+    let six=Number(document.getElementById('input2').value);
+
+    document.getElementById('out').innerHTML="Division= "+(five/six)
+}
+function mul(){
+    let seven=Number(document.getElementById('input1').value);
+    let eight=Number(document.getElementById('input2').value);
+
+    document.getElementById('out').innerHTML="Multiplication= "+(seven*eight)
+}
+
+</script>
+</html>

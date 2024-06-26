@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr=[414,6654,654,98552,564,89898,8778,987,5424,31544,644,97484,316,98745];
+
+    let obj={
+        '3digit':[],
+        '4digit':[],
+        '5digit':[]
+    }
+    let obj2={
+        '3digit':[],
+        '4digit':[],
+        '5digit':[]
+    }
+    arr.filter(val)
+    
+    function val(val2)
+    {
+        if(String(val2).length == 3)
+        {
+            obj['3digit'].push(val2)
+            obj2['3digit']++
+        }
+        
+        if(String(val2).length == 4)
+        {
+            obj['4digit'].push(val2)
+            obj2['4digit']++
+
+        }
+        
+        if(String(val2).length == 5)
+        {
+            obj['5digit'].push(val2)
+            obj2['5digit']++
+        }
+
+        
+    }
+    console.log(obj);
+    console.log(obj2);
+
+
+</script>
+</html>

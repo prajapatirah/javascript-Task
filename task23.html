@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="make()">Submit</button>
+    <h1 id="out"></h1>
+    
+</body>
+<script>
+    function make(){
+        let a=prompt()
+        if(a==1){
+            document.getElementById('out').innerHTML=a+" .31 Day In January Month"
+        }
+        else if(a==2){
+            document.getElementById('out').innerHTML=a+" .29 Day In February Month"
+        }
+         else if(a==3){
+            document.getElementById('out').innerHTML=a+" .31 Day In March Month"
+        }
+        else if(a==4){
+            document.getElementById('out').innerHTML=a+" .31 Day In April Month"
+        }
+        else if(a==5){
+            document.getElementById('out').innerHTML=a+" .31 Day In may Month"
+        }
+        else if(a==6){
+            document.getElementById('out').innerHTML=a+" .31 Day In jun Month"
+        }
+        else if(a==7){
+            document.getElementById('out').innerHTML=a+" .31 Day In Julay Month"
+        }
+        else if(a==8){
+            document.getElementById('out').innerHTML=a+" .31 Day In Aagast Month"
+        }
+        else if(a==9){
+            document.getElementById('out').innerHTML=a+" .31 Day In Saptember Month"
+        }
+        else if(a==10){
+            document.getElementById('out').innerHTML=a+" .31 Day In Octomber Month"
+        }
+        else if(a==11){
+            document.getElementById('out').innerHTML=a+" .31 Day In Navember Month"
+        }
+        else if(a==12){
+            document.getElementById('out').innerHTML=a+" .31 Day In Desember Month"
+        }
+        else{
+            document.getElementById('out').innerHTML=a+" .This is not valid Number in Month" 
+        }
+
+    }
+</script>
+</html>

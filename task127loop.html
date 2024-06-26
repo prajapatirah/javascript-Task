@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="ab()">Enter Value</button>
+</body>
+<script>
+    // entered Promt Value Is add In Yojna
+    function ab() {
+        let obj = {
+            Accomodates: {
+                Water_Connections: '9 CR',
+                LPG_ConNections: '9.6 CR',
+                PM_Kisan: '11.4 CR',
+                Jan_Dhan: '47.8 CR'
+            }
+        }
+        let Yojna = prompt('Enter Yojana');
+        let CR = prompt('Enter NEW CR')
+
+        for (let key in obj.Accomodates) {
+            // console.log(obj.Accomodates[key]);
+            if (key == Yojna) {
+                obj.Accomodates[key] = CR
+            }
+
+        }
+        console.log(obj);
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="store">
+    <button onclick="yers()">Submit</button>
+    <h1 id="out"></h1>
+    
+</body>
+<script>
+    function yers(){
+        let a=document.getElementById('store').value 
+         
+        if(a%4==0){
+            document.getElementById('out').innerHTML="This Leep Years"
+        }
+        else{
+            document.getElementById('out').innerHTML="This Not Leep Years"
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//CSS.boost/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header" style="background-image: linear-gradient(white,rgb(0, 238, 255));">
+                <b class="card-title">Input Basic of an Employee And Calulate its Salry Accroding To Follwing:</b>
+            </div>
+        </div>
+        <div class="card-body " style="background-image: linear-gradient(white,rgb(0, 238, 255));">
+            <div class="row">
+                <div class="col-6">
+                    <table class="bg-warning table-hover table-striped  " cellpadding="10">
+                        <tr class="bg-primary">
+                            <th>Basic Salry</th>
+                            <th>HRA</th>
+                            <th>DA</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <=10000< /td>
+                            <td>20%</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <=20000< /td>
+                            <td>25%</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>>20000</td>
+                            <td>30%</td>
+                            <td>95%</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <h3 id="out1"></h3>
+                    <h3 id="out2"></h3>
+                    <h3 id="out3"></h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer" style="background-image: linear-gradient(white,rgb(0, 238, 255));">
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-danger" onclick="sal()">Enter Your Sallry</button>
+                </div>
+                <div class="col-6">
+                    <h3 id="out4"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="..//boostrap/jquery.slim.min.js"></script>
+    <script src="..//boostrap/popper.min.js"></script>
+    <script src="..//boostrap/bootstrap.min.js"></script>
+
+</body>
+<script>
+    function sal(){
+        let a=Number(prompt('Enter Sallry'));
+        document.getElementById('out1').innerHTML="Your Salary="+a;
+        
+        if(a<=10000){
+        hra=20;
+        da=80;
+        rent=(a*hra)/100;
+        dearness=(a*da)/100;
+        document.getElementById('out2').innerHTML="House Rent Allowance="+rent;
+        document.getElementById('out3').innerHTML="Dearness Allowance="+dearness;
+        document.getElementById('out4').innerHTML="Your Gross Salary= "+(a+rent+dearness);
+
+        }
+        else if(a<=20000){
+        hra=25;
+        da=90;
+        rent=(a*hra)/100;
+        dearness=(a*da)/100;
+        document.getElementById('out2').innerHTML="House Rent Allowance="+rent;
+        document.getElementById('out3').innerHTML="Dearness Allowance="+dearness;
+        document.getElementById('out4').innerHTML="Your Gross Salary= "+(a+rent+dearness);
+
+        }
+        else if(a>20000){
+        hra=30;
+        da=95;
+        rent=(a*hra)/100;
+        dearness=(a*da)/100;
+        document.getElementById('out2').innerHTML="House Rent Allowance="+rent;
+        document.getElementById('out3').innerHTML="Dearness Allowance="+dearness;
+        document.getElementById('out4').innerHTML="Your Gross Salary= "+(a+rent+dearness);
+
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cal()">Enter Value</button>
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1>
+    <h1 id="out3"></h1>
+
+</body>
+<script>
+    function cal(){
+        let a=Number(prompt('Enter First Value'));
+        let b=Number(prompt('Enter Second value'));
+        let c=(prompt('Enter Op'));
+
+        if(c=="+"){
+            document.getElementById('out1').innerHTML="First Value is:-"+a;
+            document.getElementById('out2').innerHTML="First Value is:-"+b;
+            document.getElementById('out3').innerHTML=a+b;
+        }
+        else if(c=="-"){
+            document.getElementById('out1').innerHTML="First Value is:-"+a;
+            document.getElementById('out2').innerHTML="First Value is:-"+b;
+            document.getElementById('out3').innerHTML=a-b;
+        }
+        else if(c=="/"){
+            document.getElementById('out1').innerHTML="First Value is:-"+a;
+            document.getElementById('out2').innerHTML="First Value is:-"+b;
+            document.getElementById('out3').innerHTML=a/b;
+        }
+        else if(c=="*"){
+            document.getElementById('out1').innerHTML="First Value is:-"+a;
+            document.getElementById('out2').innerHTML="First Value is:-"+b;
+            document.getElementById('out3').innerHTML=a*b;
+        }
+        else{
+            alert('plase valid opretaor')
+        }
+
+
+
+
+    }
+</script>
+</html>

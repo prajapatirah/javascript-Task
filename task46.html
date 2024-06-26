@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="make()">Submit</button>
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1>
+    <h1 id="out3"></h1>
+</body>
+<script>
+    di=0
+    wi=0
+    function make(){
+        let pro=prompt('Enter Your Process');
+        if(pro=="di"){
+            let d=Number(prompt('Enter Diposite'));
+            di+=d
+            document.getElementById('out1').innerHTML="Diposite:- "+di;
+        }
+        if(pro=="wi"){
+            let w=Number(prompt('Enter Withdrew'));
+            wi+=w
+            document.getElementById('out2').innerHTML="Withdrew:- "+wi;
+        }
+        if(pro=="to"){
+            document.getElementById('out3').innerHTML="Total:- "+(di-wi);
+        }
+    }
+</script>
+</html>

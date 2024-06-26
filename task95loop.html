@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ab()">Enter Value</button>
+    
+</body>
+<script>
+    // calulate a some index to index
+    
+    function ab(){
+        let arr=[12,4,5];
+        let arr2=[8,6,20];
+        let pro=prompt('Enter Your Value');
+        let ans=[];
+
+
+        let i=0
+        while(i<arr.length){
+            let j=0
+            while(j<arr2.length){
+                if(pro=='*'){
+                    ans.push(arr[i]*arr2[j])
+                }
+                if(pro=='+'){
+                    ans.push(arr[i]+arr2[j])
+                } 
+                if(pro=='/'){
+                    ans.push(arr[i]/arr2[j])
+                }
+                if(pro=='-'){
+                    ans.push(arr[i]-arr2[j])
+                }
+                j++
+            }
+            i++
+        }
+        console.log(ans);
+
+
+    }
+
+
+</script>
+</html>

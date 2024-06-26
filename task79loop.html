@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="ab()">Enter </button>
+
+</body>
+<script>
+    function ab() {
+        let pro1 = prompt('Enter Starting Point');
+        let pro2 = prompt('Enter Ending Point');
+        let pro3 = prompt('Enter Square or cube');
+
+        for (let i = pro1; i <= pro2; i++) {
+
+            if (pro3.includes('square')) {
+                document.write(i + ' square ' + ' = ' + (i*i) + '<br>')
+            }
+            if (pro3.includes('cube')) {
+                document.write(i + ' cube ' + ' = ' + (i*i*i) + '<br>')
+            }
+        }
+    }
+
+</script>
+
+</html>

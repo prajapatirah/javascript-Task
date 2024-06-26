@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td> Age</td>
+            <td>Gender</td>
+            <td>Wage/day</td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <18< /td>
+            <td>M</td>
+            <td rowspan="2">----</td>
+        </tr>
+        <tr>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td rowspan="2">18 to 30</td>
+            <td>M</td>
+            <td>700</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>750</td>
+        </tr>
+        <tr>
+            <td rowspan="2">>30</td>
+            <td>M</td>
+            <td>800</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>850</td>
+        </tr>
+    </table><br>
+    <button onclick="make()">Enter Value</button><br>
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1>
+    <h1 id="out3"></h1>
+    <h1 id="out4"></h1>
+
+
+
+</body>
+<script>
+    function make() {
+        let g = prompt('Enter Gender');
+        let age = prompt('Enter Age');
+        let day = prompt('Working Days');
+
+        document.getElementById('out1').innerHTML = "Sex= " + g; 
+        document.getElementById('out2').innerHTML = "Age= " + age;
+        document.getElementById('out3').innerHTML = "Working Days= " + day;
+
+        if (age < 18) {
+        document.getElementById('out4').innerHTML ="You Are Not Adult.." 
+
+        }
+         else if (age >=18 && age<=30 && g=="Male") {
+        document.getElementById('out4').innerHTML ="Your Total Wage:-"+day*700 +"/-"
+        }
+        else if (age >=18 && age<=30 && g=="Female") {
+        document.getElementById('out4').innerHTML ="Your Total Wage:-"+day*750 +"/-"
+        }
+        else if (age <30 && g=="Male") {
+        document.getElementById('out4').innerHTML ="Your Total Wage:-"+day*800+"/-" 
+        }
+        else if (age <30 && g=="Female") {
+        document.getElementById('out4').innerHTML ="Your Total Wage:-"+day*850 +"/-"
+        }
+
+
+
+    }
+</script>
+
+</html>

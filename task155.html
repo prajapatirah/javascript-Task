@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="ab()">Enter</button>
+    <h1 id="a1"></h1>
+    <h1></h1>
+
+
+</body>
+<script>
+    function ab() {
+        let val = prompt('Enter Number');
+
+        if (val == 1) {
+            document.getElementById('a1').innerHTML = '1 is Neither Prime Nor Copposite Number'
+        }
+        else if (val < 1) {
+            document.getElementById('a1').innerHTML = 'Nagativ Numbers Or Zero Are Not Prime Number'
+
+
+        }
+        else {
+            let i = 2;
+            do {
+                if (val % i == 0) {
+                    document.getElementById('a1').innerHTML = 'This Is Not Prime Number'
+                    break
+
+                }
+                else {
+                    document.getElementById('a1').innerHTML = 'This Is Prime Number'
+
+                }
+                i++;
+            } while (i < val)
+        }
+    }
+</script>
+
+</html>

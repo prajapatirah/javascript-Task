@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//CSS.boost/bootstrap.min.css">
+    <style>
+        .card-header,.card-footer{
+            background-image: linear-gradient(yellow,green);
+        }
+        .card-body{
+            background-image: linear-gradient(black,rgb(17, 17, 63));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Operation By Dropdown</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" name="" id="input1"><br><br>
+                        <input type="text" name="" id="input2"><br><br>
+                        <input type="text" name="" id="input3"><br><br>
+                        <input type="text" name="" id="input4">
+                        <select id="input5">
+                            <option>+</option>
+                            <option>-</option>
+                            <option>*</option>
+                            <option>/</option>
+                            <option>%</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <h2 id="out1"></h2>
+                        <h2 id="out2"></h2>
+                        <h2 id="out3"></h2>
+                        <h2 id="out4"></h2><br>
+                        <h2 id="out5"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-danger" onclick="make()">Submit</button>
+                    </div>
+                    <div class="col-6">
+                        <h2 id="out6"></h2>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="..//boostrap/jquery.slim.min.js"></script>
+    <script src="..//boostrap/popper.min.js"></script>
+    <script src="..//boostrap/bootstrap.min.js"></script>
+    
+</body>
+<script>
+    function make(){
+        let inp1=Number(document.getElementById('input1').value);
+        let inp2=Number(document.getElementById('input2').value);
+        let inp3=Number(document.getElementById('input3').value);
+        let inp4=Number(document.getElementById('input4').value);
+        let inp5=document.getElementById('input5').value;
+        
+screenTop
+        document.getElementById('out1').innerHTML="First Value= "+inp1
+        document.getElementById('out2').innerHTML="Second Value= "+inp2
+        document.getElementById('out3').innerHTML="Third Value= "+inp3
+        document.getElementById('out4').innerHTML="Forth Value= "+inp4
+        document.getElementById('out5').innerHTML="Selectes Operator= "+inp5
+
+         if(inp5=="+"){
+            document.getElementById('out6').innerHTML="Addition ="+(inp1+inp2+inp3+inp4)
+        }
+        else if(inp5=="-"){
+            document.getElementById('out6').innerHTML="Subtraction ="+(inp1-inp2-inp3-inp4)
+        }
+        else if(inp5=="/"){
+            document.getElementById('out6').innerHTML="Divition  ="+(inp1/inp2/inp3/inp4)
+        }
+        else if(inp5=="*"){
+            document.getElementById('out6').innerHTML="Multiplaction ="+(inp1*inp2*inp3*inp4)
+        }
+        else if(inp5=="%"){
+            document.getElementById('out6').innerHTML="Moudulas ="+(inp1%inp2%inp3%inp4)
+        }
+    }
+</script>
+</html>

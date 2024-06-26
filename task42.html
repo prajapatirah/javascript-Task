@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//CSS.boost/bootstrap.min.css">
+</head>
+<body>
+    <h2>What is AQT</h2>
+    <table border="1" cellspacing="0" cellpadding="10" class="bg-warning table" id="table">
+        <tr>
+            <td>Numerical Value</td>
+            <td>Air Quailty Index Levals Of Helth Concern</td>
+            <td>Meaning</td>
+        </tr>
+    </table>
+    <button onclick="make()" class="btn btn-outline-danger">Enter Value</button>
+    <script src="..//boostrap/jquery.slim.min.js"></script>
+    <script src="..//boostrap/popper.min.js"></script>
+    <script src="..//boostrap/bootstrap.min.js"></script>
+</body>
+<script>
+     function make(){
+        let a=prompt('Enter Value');
+        let air=''
+        let me=''
+
+        if(a>=0 && a<=50){
+            air='Good'
+            me='Air Quality Is Considered Is Considered Satisfactory , And Air Pollution Pose Litle or No Risk. "'
+        }
+        else if(a>=51 && a<=100){
+            air = "Air Quality Is Acceptable However ,for some  pollution there may be a moderate Helth concern for a very small number of people who are unusally sensitiv to air pollution."
+            me = 'Moderate'
+        }
+        else if(a>=101 && a<=150){
+            air = "<b style='color:red;'>Members of Sensitive group may exaperience helth effect. the General public is not likely to be affected.</b>"
+            me = " Unhealthy for Sensitive group"
+        }
+        else if(a>=151 && a<=200){
+            air = 'Everyone may begin to experience helth effects; members of sensitive group may experience more serioous helth effects.'
+            me = 'Unhealthy'
+        }
+        else if(a>=201 && a<=250){
+            air = 'Helthy Warning of emergency conditions.The entries population is more likely to be affected.'
+            me = 'Very Unhealthy'
+        }
+        else if(a>=251 && a<=500){
+            air = 'Health Alert ;Everyone may Exprience more serious Helthy Effects. '
+            me = 'Hazardous'
+        }
+        else{
+            alert('Enter Valid Number')
+        }
+        document.getElementById('table').innerHTML+=`<tr <span style="background-color: green;"></span>
+            <td>`+a+`</td>
+            <td>`+air+`</td>
+            <td>`+me+`</td> </tr>`
+
+     }
+</script>
+</html>

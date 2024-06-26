@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="ab()">Enter Word</button>
+    <h1 id="out"></h1>
+
+</body>
+<script>
+    // type polidrame word ex.pop,ckc 
+    function ab() {
+        let pro = prompt('Enter Word');
+        let store = '';
+        for (let i = pro.length - 1; i >= 0; i--) {
+            store += pro[i]
+            if (store == pro) {
+                document.getElementById('out').innerHTML = 'This is Polindrome Word'
+            }
+            else {
+                document.getElementById('out').innerHTML = 'This is Not Polindrome Word'
+
+            }
+
+        }
+        console.log(store);
+    }
+</script>
+
+</html>

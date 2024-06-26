@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="store">
+    <button onclick="week()">Submit</button>
+    <h1 id="out"></h1>
+</body>
+<script>
+    function week(){
+        let a=document.getElementById('store').value 
+        if(a==1){
+            document.getElementById('out').innerHTML=a+" .Today Is Monday"
+            document.getElementById('out').style.color="red"
+        }
+        else if(a==2){
+            document.getElementById('out').innerHTML=a+" .Today Is Tuesday"
+            document.getElementById('out').style.color="green"
+        }
+        else if(a==3){
+            document.getElementById('out').innerHTML=a+" .Today Is Wednesday"
+            document.getElementById('out').style.color="pink"
+        }
+        else if(a==4){
+            document.getElementById('out').innerHTML=a+" .Today Is Thursday"
+            document.getElementById('out').style.color="Orange"
+        }
+        else if(a==5){
+            document.getElementById('out').innerHTML=a+" .Today Is Friday"
+            document.getElementById('out').style.color="blue"
+        }
+        else if(a==6){
+            document.getElementById('out').innerHTML=a+" .Today Is Saturday"
+            document.getElementById('out').style.color="yellow"
+        }
+        else if(a==7){
+            document.getElementById('out').innerHTML=a+" .Today Is Sunday"
+            document.getElementById('out').style.color="red"
+        }
+        else{
+            document.getElementById('out').innerHTML=a+" . This is Not week Number"
+            document.getElementById('out').style.color="black"
+
+        }
+    }
+</script>
+</html>

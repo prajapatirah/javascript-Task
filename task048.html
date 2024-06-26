@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//CSS.boost/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <table class="table table-hover table-striped bg-warning" id="table">
+            <tr>
+                <td>Roll No</td>
+                <td>Name</td>
+                <td>Maths</td>
+                <td>Sci</td>
+                <td>Eng</td>
+                <td>Hindi</td>
+                <td>Total</td>
+                <td>Per(%)</td>
+                <td>Grade</td>
+                <td>Result</td>
+            </tr>
+        </table>
+        <button class="btn btn-danger" onclick="make()">Enter Your Marks</button><br>
+        <table class="table table-hover table-striped bg-warning" id="table2">
+            <tr>
+                <td>Roll No</td>
+                <td>Name</td>
+                <td>Pass/fail</td>
+                <td>In Which Subjects Yo Are Fail??</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="..//boostrap/jquery.slim.min.js"></script>
+    <script src="..//boostrap/popper.min.js"></script>
+    <script src="..//boostrap/bootstrap.min.js"></script>
+</body>
+<script>
+    function make() {
+        let roll = Number(prompt('Enter Roll'));
+        let name = prompt('Enter Name');
+        let maths = Number(prompt('Enter Maths Marks'));
+        let sci = Number(prompt('Enter Sci Marks'));
+        let eng = Number(prompt('Enter Eng Marks'));
+        let hindi = Number(prompt('Enter Hindi Marks'));
+        let total = maths + sci + eng + hindi
+        let per = '';
+        let grade = '';
+        let result = '';
+        let ps = '';
+        let sub = '';
+
+        if ((maths > 33) && (sci > 33) && (eng > 33) && (hindi > 33)) {
+            per = total / 4;
+            if ((per >= 33 )&&( per <=45) ){
+                grade = 'D';
+                result='pass';
+                ps='Pass';
+                sub='---'
+            }
+            else if ((per >45 )&&( per <= 55) ){
+                grade = 'c';
+                result='pass';
+                ps='Pass';
+                sub='---'
+            }
+            else if ((per >55 )&&( per <= 70) ){
+                grade = 'B';
+                result='pass';
+                ps='Pass';
+                sub='---'
+            }
+            else if ((per >70 )&&( per <= 80) ){
+                grade = 'B+';
+                result='pass';
+                ps='Pass';
+                sub='---'
+            }
+            else if ((per >80 )&&( per < 90) ){
+                grade = 'A';
+                result='pass';
+                ps='Pass';
+                sub='---'
+            }
+            else if ((per >90 )&&( per <= 100) ){
+                grade = 'A+';
+                result='pass';
+                ps='Pass';
+                sub='---'
+
+            }
+
+        }
+        else if((maths<33)||(sci<33)||(eng<33)||(hindi<33)){
+            per='---';
+            grade='---';
+            result='Fail';
+            ps='Fail';
+            if((maths<33)&&(sci<33)&&(eng<33)&&(hindi<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub.And only "+sci+" in SCI. and ENG "+eng+" and "+hindi+" HINDI."
+            }
+            else if((maths<33)&&(sci<33)&&(eng<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub.And only "+sci+" in SCI. and ENG "+eng+" and "
+            }
+            
+            
+            else if((maths<33)&&(eng<33)&&(hindi<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub.And only "+" and ENG "+eng+" and "+hindi+" HINDI."
+             }
+            else if((sci<33)&&(eng<33)&&(hindi<33)){
+                sub='You Are Fail Because only '+sci+" SCI sub.And only "+"  and ENG "+eng+" and "+hindi+" HINDI."
+            }
+            else if((maths<33)&&(sci<33)&&(hindi<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub.And only "+"  and SCI "+sci+" and "+hindi+" HINDI."
+            }
+            
+            else if((maths<33)&&(sci<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub.And only "+sci+" in SCI.  "
+            }
+            else if((maths<33)&&(eng<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub.And only "+eng+"  ENG "
+            }
+            else if((maths<33)&&(hindi<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub.And only "+hindi+" in HINDI"
+            }
+            else if((sci<33)&&(eng<33)){
+                sub='You Are Fail Because only '+sci+" SCI sub.And only "+eng+" in ENG"
+            }
+            else if((sci<33)&&(hindi<33)){
+                sub='You Are Fail Because only '+sci+" SCI sub.And only "+hindi+" in HINDI"
+            }
+            else if((eng<33)&&(hindi<33)){
+                sub='You Are Fail Because only '+eng+" ENG sub.And only "+hindi+" in HINDI"
+            }
+            else if((maths<33)){
+                sub='You Are Fail Because only '+maths+" MATHS sub. "
+            }
+            else if((sci<33)){
+                sub='You Are Fail Because only '+sci+" SCI sub. "
+            }
+            else if((eng<33)){
+                sub='You Are Fail Because only '+eng+" ENG sub. "   
+            }
+            else{
+                sub='You Are Fail Because only '+hindi+" HINDI sub. "
+            }
+        }
+        
+
+
+
+        document.getElementById('table').innerHTML += `<tr>
+            <td>`+ roll + `</td>
+            <td>`+ name + `</td>
+            <td>`+ maths + `</td>
+            <td>`+ sci + `</td>
+            <td>`+ eng + `</td>
+            <td>`+ hindi + `</td>
+            <td>`+ total + `</td>
+            <td>`+ per + `</td>
+            <td>`+ grade + `</td>
+            <td>`+ result + `</td></tr>`
+
+        document.getElementById('table2').innerHTML += `<tr>
+            <td>`+ roll + `</td>
+            <td>`+ name + `</td>
+            <td>`+ ps + `</td>
+            <td>`+ sub + `</td></tr>`
+
+
+
+    }
+</script>
+
+</html>

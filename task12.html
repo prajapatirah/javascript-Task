@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <!--Fil the form and submit it show in full information in table  -->
+    <fieldset>
+        <legend>Registrstion Form</legend>
+        <label for="">No:-</label>
+        <input type="text" name="" id="a1"><br><br>
+        <label for="">Name:-</label>
+        <input type="text" name="" id="a2"><br><br>
+        <label for="">Father Name:-</label>
+        <input type="text" name="" id="a3"><br><br>
+        <label for="">Surname:-</label>
+        <input type="text" name="" id="a4"><br><br>
+        <label for="">Birth Date:-</label>
+        <input type="date" name="" id="a5"><br><br>
+        <label for="">fieldset:-</label>
+        <select name="" id="a6">
+            <option >Select</option>
+            <option >Sicence</option>
+            <option >Commars</option>
+            <option >Arts</option>
+        </select><br><br>
+        <label for="">Mo.No</label>
+        <select name="" id="">
+            <option >Select</option>
+            <option >+91</option>
+            <option >+92</option>
+            <option >+93</option>
+        </select>
+        <input type="number" name="" id="a7"><br><br>
+        <label for="">City:-</label>
+        <select id="a8">
+            <option >Select</option>
+            <option >Patan</option>
+            <option >Deesa</option>
+            <option >Palanur</option>
+        </select><br><br>
+        <label for="">Address:-</label>
+        <textarea name="" id="a9" cols="" rows=""></textarea><br><br>
+        <button onclick="button()">Submit</button>
+    </fieldset>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Father's Name</th>
+            <th>Surname</th>
+            <th>BirthDate</th>
+            <th>Field</th>
+            <th>Mo.No</th>
+            <th>City</th>
+            <th>Adress</th>
+        </tr>
+        <tr>
+            <th id="b1"></th>
+            <th id="b2"></th>
+            <th id="b3"></th>
+            <th id="b4"></th>
+            <th id="b5"></th>
+            <th id="b6"></th>
+            <th id="b7"></th>
+            <th id="b8"></th>
+            <th id="b9"></th>
+        </tr>
+
+    </table>
+</body>
+<script>
+    function button(){
+        let one=document.getElementById('a1').value;
+        document.getElementById('b1').innerHTML=one
+
+        let one1=document.getElementById('a2').value;
+        document.getElementById('b2').innerHTML=one1
+
+        let one2=document.getElementById('a3').value;
+        document.getElementById('b3').innerHTML=one2
+
+        let one3=document.getElementById('a4').value;
+        document.getElementById('b4').innerHTML=one3
+
+        let one4=document.getElementById('a5').value;
+        document.getElementById('b5').innerHTML=one4
+
+        let one5=document.getElementById('a6').value;
+        document.getElementById('b6').innerHTML=one5
+
+        let one6=document.getElementById('a7').value;
+        document.getElementById('b7').innerHTML=one6
+
+        let one7=document.getElementById('a8').value;
+        document.getElementById('b8').innerHTML=one7
+
+        let one8=document.getElementById('a9').value;
+        document.getElementById('b9').innerHTML=one8
+
+    }
+</script>
+
+</html>

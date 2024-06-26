@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // key convart in uppercase and point value hide and round figar number push
+    let obj={
+        Money:'50.20$',
+        Per:'30.32%',
+        Money2:'60.99$',
+        per2:'80.47%'
+    }
+
+    obj2={};
+
+    for(let key in obj){
+        let upper=key.toUpperCase()
+        console.log(upper);
+        if(obj[key].includes('%')){
+            let rep=obj[key].replace('%','')
+            let round=Math.round(rep)
+            obj2[upper]=round
+        }
+        if(obj[key].includes('$')){
+            let rep=obj[key].replace('$','')
+            let round=Math.round(rep)
+            obj2[upper]=round
+        }
+    }
+    console.log(obj2);
+</script>
+</html>

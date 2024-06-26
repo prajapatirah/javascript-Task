@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td>Age</td>
+            <td>Section</td>
+        </tr>
+        <tr>
+            <td>0to9</td>
+            <td>Kind</td>
+        </tr>
+        <tr>
+            <td>10 to 25</td>
+            <td>Teen</td>
+        </tr>
+        <tr>
+            <td>26 to 60</td>
+            <td>Young</td>
+        </tr>
+        <tr>
+            <td>>60</td>
+            <td>old</td>
+        </tr>
+    </table>
+    
+</body>
+<script>
+    let arr=[9,16,17,6,18,9,22,2,26,5,33,45,8,56,88,67,9,44,28,78];
+
+    let obj={'kid':[],'teen':[],'young':[],'old':[]}
+    let obj2={'kid':[],'teen':[],'young':[],'old':[]}
+
+    arr.filter(val)
+
+    function val(val2){
+        if(val2<=9){
+            obj['kid'].push(val2)
+            obj2['kid']++
+
+        }
+        if(val2>9 && val2<=25){
+            obj['teen'].push(val2)
+            obj2['teen']++
+
+        }
+        if(val2>25 && val2<=60){
+            obj['young'].push(val2)
+            obj2['young']++
+
+        }
+        if(val2>60){
+            obj['old'].push(val2)
+            obj2['old']++
+
+        }
+        
+
+
+    }
+    console.log(obj);
+    console.log(obj2);
+
+
+</script>
+</html>

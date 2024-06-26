@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //odd index and even index find word and not cout space index
+    let str = 'Be Stronger Then Your Strongest Excuse ';
+    let even = '';
+    let odd = '';
+
+    let i = 0
+    while (i < str.length) {
+        if(str[i]!=''){
+        if (i % 2 == 0) {
+            even += str[i]
+        }
+        if (i % 2 != 0) {
+            odd += str[i]
+        }
+    }
+        even+=' '
+        odd+=' '      // add space 
+
+        i++
+    }
+    console.log(' word in even endex :- ', even);
+    console.log(' word in odd endex :- ', odd);
+
+
+
+
+</script>
+
+</html>

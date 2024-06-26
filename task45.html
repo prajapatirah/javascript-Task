@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the tringle is equilateral, isosceles or saalene tringle:</h1>
+    <h2 id="out1"></h2>
+    <h2 id="out2"></h2>
+    <h2 id="out3"></h2>
+    <button onclick="side()">Enter Value</button>
+    <h1 id="out4"></h1>
+
+    
+</body>
+<script>
+    function side(){
+        let first=prompt('Enter First Value');
+        let second=prompt('Enter second Value');
+        let third=prompt('Enter third Value');
+
+        document.getElementById('out1').innerHTML="First Side= "+first;
+        document.getElementById('out2').innerHTML="Second Side ="+second;
+        document.getElementById('out3').innerHTML="Third Side ="+third;
+
+        if((first==second)&& (second==third)&&(first==third)){
+        document.getElementById('out4').innerHTML="The tringle"+"<span style='color:red;'>equilateral</span>"+"Tringle because 3 slides are equal..";
+        }
+        else if((first==second)|| (second==third)||(first==third)){
+            document.getElementById('out4').innerHTML="This is"+"<span style='color:red;'>isosceles</span>"+"Tringle because 2 slides are equal..";
+
+        }
+        else if((first!=second)|| (second!=third)||(first!=third)){
+            document.getElementById('out4').innerHTML="This is"+"<span style='color:red;'>Scalene</span>"+"Tringle because 3 slides are Not equal..";
+
+        }
+       
+
+
+    }
+</script>
+</html>

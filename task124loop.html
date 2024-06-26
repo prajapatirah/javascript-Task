@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let obj = {
+        office: 'Webilok',
+        python: {
+            fees: 50000,
+            student: ['Vikash Yes', 'hitesh Yes', 'Pankaj No', 'Mayank No'],
+
+        },
+        PHP: {
+            fee: 20000,
+            student: ['rajesh Yes', 'Vivek No', 'Nikhil Yes'],
+        },
+        Java: {
+            Fees: 30000,
+            student: ['Nikhil Yes', 'Hitesh No', 'Sunil No', 'Dhaval Yes', 'Rahul Yes']
+        }
+    }
+    let obj2 = {
+        No: [],
+        Yes: []
+    }
+
+    for (let key in obj.python.student) {
+        let arr = obj.python.student[key].split(' ')
+        // console.log(arr);
+        if (arr.includes('Yes')) {
+            obj2.Yes.push(arr[0] + ' ' + obj.python.fees)
+        }
+        if (arr.includes('No')) {
+            obj2.No.push(arr[0] + ' ' + obj.python.fees)
+
+        }
+
+    }
+    for (let key in obj.PHP.student) {
+        let arr2 = obj.PHP.student[key].split(' ')
+        console.log(arr2);
+        if (arr2.includes('Yes')) {
+            obj2.Yes.push(arr2[0] + ' ' + obj.PHP.fee)
+        }
+        if (arr2.includes('No')) {
+            obj2.No.push(arr2[0] + ' ' + obj.PHP.fee)
+        }
+    }
+    for (let key in obj.Java.student) {
+        let arr3 = obj.Java.student[key].split(' ')
+        if (arr3.includes('Yes')) {
+            obj2.Yes.push(arr3[0] + ' ' + obj.PHP.fee)
+        }
+        if (arr3.includes('No')) {
+            obj2.No.push(arr3[0] + ' ' + obj.PHP.fee)
+        }
+    }
+    console.log(obj2);
+</script>
+
+</html>

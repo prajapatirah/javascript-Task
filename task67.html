@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cal()">Enter Discound value</button><br><br>
+    <button onclick="pl()">Profit/Loss</button>
+
+    <h1 id="out1"></h1>
+    <h1 id="out2"></h1>
+    <h1 id="out3"></h1>
+
+
+
+</body>
+<script>
+    function pl() {
+        let pro = prompt("enter 2 Value");
+        let spl3 = pro.split(' ');
+        document.getElementById('out1').innerHTML = 'Orignal Price :- ' + spl3[0]
+        document.getElementById('out2').innerHTML = 'Selling  Price :- ' + spl3[1]
+
+        if (spl3[0] < spl3[1]) {
+
+            document.getElementById('out3').innerHTML = 'Your Profit Is  :- ' + (spl3[1] - spl3[0])
+        }
+        if (spl3[0] > spl3[1]) {
+
+            document.getElementById('out3').innerHTML = 'Your Loss Is  :- ' + (spl3[0] - spl3[1])
+        }
+    }
+
+    function cal() {
+        let pro = prompt('Enter Value');
+        let spl = pro.split(' ')
+        document.getElementById('out1').innerHTML = ' Orignal Value:- ' + spl[0];
+        document.getElementById('out2').innerHTML = 'Discound (%):- ' + spl[1];
+
+        if (spl[1].includes('%')) {
+            let rel = spl[1].replace('%', '')
+            document.getElementById('out3').innerHTML = 'Total  Discound :- ' + (spl[0] * rel) / 100;
+        }
+
+
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ab()">Enter Value</button>
+    <!-- <h1 id="out"></h1> -->
+
+    
+</body>
+<script>
+    function ab()
+    {
+        let pro=prompt('Enter Value ');
+        // let spl=pro.split(',')
+        console.log(pro);
+        for(let i=0; i<pro.length; i++)
+        {
+            if(pro[i] == 'a'||pro[i] == 'e'||pro[i] == 'i'||pro[i] == 'o'||pro[i] == 'A'||pro[i] == 'E'||pro[i] == 'I'||pro[i] == 'O'||pro[i] == 'u'||pro[i] == 'U')
+            {
+                document.write('<span style="color:red; font-size:50px;">'+pro[i]+'</span>')
+            }
+            else{
+                document.write('<span style="color:green; font-size:50px;">'+pro[i]+'</span>')   
+            }
+        }
+    }
+</script>
+</html>

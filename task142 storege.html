@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="a1">
+    <input type="text" name="" id="a2">
+<button onclick="ab()">Enter Value</button>
+    
+</body>
+<script>
+    function ab(){
+        let val1=document.getElementById('a1').value 
+        let val2=document.getElementById('a2').value 
+
+        let spl=val1.split(' ')
+        let spl2=val2.split(' ')
+        console.log(spl2);
+
+
+
+    
+    localStorage.setItem('head1',spl[0])
+    localStorage.setItem('head2',spl[1])
+    localStorage.setItem('head3',spl[2])
+
+    localStorage.setItem('val1',spl2[0])
+    localStorage.setItem('val2',spl2[1])
+    localStorage.setItem('val3',spl2[2])
+
+    }
+</script>
+</html>

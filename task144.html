@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ab()">Enter Value</button><br><br>
+    <table border="1" id="table" cellspacing="0" cellpadding="10">
+        <tr>
+            <td>Shape</td>
+            <td>Redius(r)</td>
+            <td>Width</td>
+            <td>Length</td>
+            <td>Base</td>
+            <td>Height</td>
+            <td>Side</td>
+            <td>Area</td>
+        </tr>
+      
+    </table>
+    
+</body>
+<script>
+    function ab(){
+        let inp=prompt('Enter Value')
+        let spl=inp.split(' ')
+        let sh='';
+        let re='';
+        let wi='';
+        let le='';
+        let ba='';
+        let he='';
+        let shd='';
+        let ar='';
+
+        if(spl[0]=='cr'){
+            sh='Circle'
+            re=spl[1]
+            ar=(spl[1]*spl[1])*3.14
+
+        }
+        if(spl[0]=='re'){
+            sh='Rectangle'
+            wi=spl[1]
+            le=spl[2]
+            ar=(spl[1]*spl[2])
+
+        }
+
+        if(spl[0]=='tr'){
+            sh='Triangle'
+            ba=spl[1]
+            he=spl[2]
+            ar=(spl[1]*spl[2])
+
+        }
+        if(spl[0]=='sqr'){
+            sh='Square'
+            shd=spl[1]
+            ar=(spl[1]*4)
+
+        }
+
+        document.getElementById('table').innerHTML+=`<tr>
+            <td>`+sh+`</td>
+            <td>`+re+`</td>
+            <td>`+wi+`</td>
+            <td>`+le+`</td>
+            <td>`+ba+`</td>
+            <td>`+he+`</td>
+            <td>`+shd+`</td>
+            <td>`+ar+`</td>
+            </tr>`
+    }
+
+
+</script>
+</html>

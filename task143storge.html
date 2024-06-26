@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td><label for="">First Name:-</label></td>
+            <td><input type="text" name="" id="a1"></td>
+        </tr>
+        <tr>
+            <td><label for="">LastName:-</label></td>
+            <td><input type="text" name="" id="a2"></td>
+        </tr>
+        <tr>
+            <td><label for="">Gender:-</label></td>
+            <td><input type="radio" name="gender" id="" value="male">male
+                <input type="radio" name="gender" id="" value="female">female
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">E-mail</label></td>
+            <td><input type="email" name="" id="a3"></td>
+        </tr>
+        <tr>
+            <td><label for="">Password:-</label></td>
+            <td><input type="password" name="" id="a4"></td>
+        </tr>
+        <tr>
+            <td><label for="">Mo.No:-</label></td>
+            <td>
+                <select id="a5">
+                    <option value="+91">+91</option>
+                    <option value="+92">+92</option>
+                    <option value="+93">+93</option>
+                    <option value="+94">+94</option>
+                </select>
+                <input type="number" name="" id="a6">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">Study:-</label></td>
+            <td><select id="a7">
+                <option >10th</option>
+                <option >12th</option>
+                <option >B.com</option>
+                <option >B.A</option>
+
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="">city:-</label></td>
+            <td><select id="a8">
+                <option value="patan">Patan</option>
+                <option value="deesa">deesa</option>
+                <option value="palanpur">palanpur</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="">Hobbies:-</label></td>
+            <td><input type="checkbox" name="hobi" id="" value="cricket">cricket
+                <input type="checkbox" name="hobi" id="" value="reading">reading
+                <input type="checkbox" name="hobi" id="" value="walking">walking</td>
+        </tr>
+        <tr>
+            <td><button onclick="ab()">Submit</button></td>
+            <td><button>Reset</button></td>
+        </tr>
+    </table>
+    <fieldset>
+        <input type="text" name="" id="pas">
+        <button onclick="cl()">Enter Password</button><br>
+        <h1 style="display: none;" id="h1">Regitrastion Form</h1>
+
+        <table id="table"  cellspacing="0" cellpadding="10" border="1" style="display: none;">
+            <tr>
+                <td>FirstName</td>
+                <td>LastName</td>
+                <td>Gender</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Mo.no</td>
+                <td>Study</td>
+                <td>City</td>
+                <td>Hobbies</td>
+            </tr>
+            <tr>
+                <td id="q1"></td>
+                <td  id="q2"></td>
+                <td  id="q3"></td>
+                <td  id="q4"></td>
+                <td  id="q5"></td>
+                <td  id="q6"></td>
+                <td  id="q9"></td>
+                <td  id="q7" ></td>
+                <td  id="q8" ></td>
+            </tr> 
+        </table>
+       
+</body>
+<script>
+    function ab(){
+        let fname=document.getElementById('a1').value 
+        let lname=document.getElementById('a2').value 
+        let gender=document.getElementsByName('gender');
+        let newgender=''
+        for(let i=0; i<gender.length; i++){
+            if(gender[i].checked){
+
+                newgender+=gender[i].value 
+            }
+        }
+        let email=document.getElementById('a3').value 
+        let pass=document.getElementById('a4').value 
+        let mo=document.getElementById('a5').value 
+        let mo2=document.getElementById('a6').value 
+        let study=document.getElementById('a7').value 
+        let city=document.getElementById('a8').value 
+        let hobi=document.getElementsByName('hobi');
+        let newhobi=''
+
+        for(let i=0; i<hobi.length; i++){
+            if(hobi[i].checked){
+
+                newhobi+='  '+hobi[i].value 
+            }
+
+        }
+
+
+        localStorage.setItem('fname',fname)
+        localStorage.setItem('lname',lname)
+        localStorage.setItem('gender',newgender)
+        localStorage.setItem('email',email)
+        localStorage.setItem('pass',pass)
+        localStorage.setItem('mo',mo)
+        localStorage.setItem('mo2',mo2)
+        localStorage.setItem('study',study)
+        localStorage.setItem('city',city)
+        localStorage.setItem('hobi',newhobi)
+
+    }
+    function cl(){
+        let password=document.getElementById('pas').value 
+        let storegepassword=localStorage.getItem('pass');
+        let fname=localStorage.getItem('fname');
+        let lname=localStorage.getItem('lname');
+        let gender=localStorage.getItem('gender');
+        let email=localStorage.getItem('email');
+        let pass=localStorage.getItem('pass');
+        let mo=localStorage.getItem('mo');
+        let mo2=localStorage.getItem('mo2');
+        let study=localStorage.getItem('study');
+        let city=localStorage.getItem('city');
+        let newhobi=localStorage.getItem('hobi');
+        console.log(fname);
+
+        if(password==storegepassword){
+            document.getElementById('table').style.display='block'
+            document.getElementById('h1').style.display='block'
+
+
+            document.getElementById('q1').innerHTML=fname
+            document.getElementById('q2').innerHTML=lname
+            document.getElementById('q3').innerHTML=gender
+            document.getElementById('q4').innerHTML=email
+            document.getElementById('q5').innerHTML=pass
+            document.getElementById('q6').innerHTML=mo+mo2
+            document.getElementById('q9').innerHTML=study
+
+            document.getElementById('q7').innerHTML=city
+            document.getElementById('q8').innerHTML=newhobi
+
+        }
+        else{
+            alert('Enter Valid Password')
+        }
+    
+    }
+
+</script>
+
+</html>

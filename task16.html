@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li></li>
+        <li></li>
+    </ol>
+    <fieldset>
+        <legend>Normal Tag</legend>
+        <input type="text" name="" id="tag1" placeholder="Enter Tag">
+        <input type="text" name="" id="val1" placeholder="Enter Value">
+        <button onclick="Normal()">Submit</button>
+        <div id="out"></div>
+    </fieldset><br><br>
+    <fieldset>
+        <legend>Img</legend>
+        <input type="text" name="" id="img" placeholder="Img tag">
+        <input type="text" name="" id="src" placeholder="Enter Value">
+        <input type="text" name="" id="height" placeholder="Enter height">
+        <button onclick="img()">submit</button>
+        <div id="out2"></div>
+    </fieldset><br>
+    <fieldset>
+        <legend>Anchor</legend>
+        <input type="text" name="" id="a" placeholder="Enter a Tag">
+        <input type="text" name="" id="link" placeholder="Enter link">
+        <input type="text" name="" id="val3" placeholder="Enter Value">
+        <button onclick="a()">Submit</button>
+        <div id="out3"></div>
+
+    </fieldset>
+    <fieldset>
+        <legend>ol-ul</legend>
+        <input type="text" name="" id="ol">
+        <input type="text" name="" id="li">
+        <input type="text" name="" id="val11">
+        <input type="text" name="" id="val12">
+        <button onclick="ol()">submit</button>
+        <div id="out4"></div>
+    </fieldset>
+    <fieldset>
+        <legend>Video tag</legend>
+        <input type="text" name="" id="video">
+        <input type="text" name="" id="source">
+        <input type="text" name="" id="value6">
+        <button onclick="video()">Submit</button>
+        <div id="out6"></div>
+
+    </fieldset><br>
+    <fieldset>
+        <legend>Audio tag</legend>
+        <input type="text" name="" id="audio">
+        <input type="text" name="" id="source2">
+        <input type="text" name="" id="value7">
+        <button onclick="audio()">submit</button>
+        <div id="out7"></div>
+
+    </fieldset>
+</body>
+<script>
+    function Normal(){
+        let tag=document.getElementById('tag1').value
+        let val1=document.getElementById('val1').value
+        document.getElementById('out').innerHTML="<"+tag+">"+val1+"<"+tag+">"
+    }
+    function img(){
+        let img=document.getElementById('img').value 
+        let src=document.getElementById('src').value
+        let height=document.getElementById('height').value
+        document.getElementById('out2').innerHTML="<"+img+ " src='"+src+"' height='"+height+"'>"
+    }
+    function a(){
+        let a=document.getElementById('a').value
+        let link=document.getElementById('link').value
+        let val3=document.getElementById('val3').value
+        document.getElementById('out3').innerHTML="<"+a+" href='"+link+"'>"+val3+"<"+a+">"
+    }
+    function ol(){
+        let ol=document.getElementById('ol').value
+        let li=document.getElementById('li').value
+        let val11=document.getElementById('val11').value
+        let vall12=document.getElementById('val12').value
+        document.getElementById('out4').innerHTML="<"+ol+">"+"<"+li+">"+val11+"</"+li+">"+"<"+li+">"+vall12+"<"+ol+">"+"<"+li+">"+vall12+"</"+li+">"+"</"+ol+">"
+    }
+    function video(){
+        let video=document.getElementById('video').value
+        let source=document.getElementById('video').value
+        let value6=document.getElementById('value6').value
+        document.getElementById('out6').innerHTML="<"+video+ " controls"+">"+"<"+source+" src='"+value6+"'>"+"</"+video+">"
+    }
+    function audio(){
+        let audio=document.getElementById('audio').value
+        let source2=document.getElementById('source2').value
+        let value7=document.getElementById('value7').value
+        document.getElementById('out7').innerHTML="<"+audio+" controls"+">"+"<"+source2+ " src='"+value7+"'>"+"</"+audio+">"
+
+    }
+
+</script>
+</html>

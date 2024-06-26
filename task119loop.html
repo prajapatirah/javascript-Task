@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // How to only key is capital in arr ?
+
+    let obj = {
+        focuse: "Yes",
+        Dedication: "Yes",
+        Excusess: "No",
+        Lazyness: "No",
+        Motivation: "Yes"
+    }
+    let obj2 = {
+        Yes: [],
+        No: []
+    }
+
+    for (let key in obj) {
+        if (obj[key] == 'Yes') {
+
+            let store = '';
+            store += key
+            let cap = store.toUpperCase()
+            obj2.Yes.push(cap)
+
+        }
+        if (obj[key] == 'No') {
+
+            let store2 = '';                           // First of all Store value and second step convart in capital
+            store2 += key
+            let cap2 = store2.toUpperCase()
+            obj2.No.push(cap2)
+        }
+
+
+    }
+    console.log(obj2);
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="same()">Enter Number</button>
+    <h3 id="out1"></h3>
+    <h3 id="out2"></h3>
+    <h3 id="out3"></h3>
+
+    <h1 id="out"></h1>
+</body>
+<script>
+    function same(){
+        let a=Number(prompt('Enter First Number'));
+        let b=Number(prompt('Enter Second Number'));
+        let c=Number(prompt('Enter Third Number'));
+
+        if((a%10)&&(b%10)==(c%10)){
+            document.getElementById('out1').innerHTML="First Number:-"+a;
+            document.getElementById('out2').innerHTML="Second Number:-"+b;
+            document.getElementById('out3').innerHTML="Third Number:-"+c;
+
+            document.getElementById('out').innerHTML=" Last Digit Are  <span 'style=color:red;' >Same</span>";
+        }
+        else{
+            document.getElementById('out1').innerHTML="First Number:-"+a;
+            document.getElementById('out2').innerHTML="Second Number:-"+b;
+            document.getElementById('out3').innerHTML="Third Number:-"+c;
+
+            document.getElementById('out').innerHTML=" Last Digit Are Not  <span style=color:'red';>Same</span>";
+        }
+
+    }
+</script>
+</html>

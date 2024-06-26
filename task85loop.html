@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let str='JAVA34 PHP0 C++910 Logo7 Python20 Laravel11 Swift10 PACAL70'; //find a index word end of'0'
+    let spl=str.split(' ');
+    let store=''
+
+    let i=0
+    while(i<spl.length){
+        if(spl[i]!=' '){
+
+        
+        if(spl[i].endsWith('0')){
+            store+=spl[i]
+
+        }
+    }
+    store+=' '
+        i++
+    }
+    console.log('word  end of Zero :-',store);
+
+</script>
+</html>

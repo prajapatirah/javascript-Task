@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="a1">
+    <input type="text" name="" id="a2">
+<button onclick="ab()">Submit</button>
+<div id="a3"></div>
+    
+</body>
+<script>
+    function ab(){
+        let val1=document.getElementById('a1').value 
+        let val2=document.getElementById('a2').value 
+        
+        if(val1==''){
+            alert('Plz Enter First Value')
+        }
+
+        if(val2==''){
+            alert('Plz Enter Second Value')
+        }
+        else{
+            document.getElementById('a3').innerHTML+='<input type=text>'
+        }
+    }
+
+</script>
+</html>

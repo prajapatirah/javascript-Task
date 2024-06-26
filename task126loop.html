@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let obj={
+        office:'Webilok',
+        Employee:{
+            Vikash:7000,
+            Mayank:17000,
+            Hitesh:7000,
+            Pankaj:17000,
+            Mukesh:17000
+        },
+        Student:{
+            Python:20,
+            Laravel:10,
+            PHP:7,
+            JAVA:20
+        }
+    }
+    let obj2={
+
+    }
+    let to_employee=0;
+    let to_student=0;
+    let to_course=0;
+    let to_salary=0;
+
+
+    for(let key in obj.office){
+        obj2.office=obj.office
+    }
+
+
+
+    for(let key in obj.Employee){
+        to_employee++
+        to_salary+= obj.Employee[key]
+        obj2.Total_Employee=to_employee
+        obj2.Total_Salary=to_salary
+
+    }
+    for(let key in obj.Student){
+        to_student+=obj.Student[key]
+        to_course++
+
+        obj2.Total_student=to_student
+        obj2.Total_course=to_course
+    }
+    console.log(to_employee);
+    console.log(to_salary);
+    console.log(to_student);
+
+    console.log(obj2);
+
+
+</script>
+</html>

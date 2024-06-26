@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let str = 'Suceess is Journey not a Destination'
+    let vovell = 'aeiouAEIOU';
+    let ans=''
+
+
+
+
+    let small = 'abcdefghijklmnopqrstuvwxyz'
+    let capital = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    for (let i = 0; i < str.length; i++) {
+       if(str[i]!=' '){
+
+        if(vovell.indexOf(str[i])!=-1){
+            let cap=small.indexOf(str[i])
+            let cap2=capital[cap]
+            ans+=cap2
+        }
+        else if(str[i]>='A'&&str[i]<='Z'){
+            let sm=capital.indexOf(str[i])
+            let sm2=small[sm]
+            ans+=sm2
+        }
+        else{
+            ans+=str[i]
+        }
+       }
+
+       ans+=' '
+    }
+    console.log(ans);
+</script>
+
+</html>

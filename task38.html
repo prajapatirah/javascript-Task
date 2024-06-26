@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//CSS.boost/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h3 class="card-title text-center ">Make Dropdown By Input Box..</h3>
+            </div>
+            <div class="card-body bg-warning">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" name="" id="input1">
+                        <select>
+                            <option>City</option>
+                            <option  id="input2" ></option>
+                            <option  ></option>
+                            <option ></option>
+                            <option ></option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <h1 id="out1"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-info">
+                <button class="btn btn-danger" onclick="make()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="..//boostrap/jquery.slim.min.js"></script>
+    <script src="..//boostrap/popper.min.js"></script>
+    <script src="..//boostrap/bootstrap.min.js"></script>
+    
+</body>
+<script>
+    function make(){
+        let store=document.getElementById('input1').value ;
+
+        document.getElementById('out1').innerHTML="New Entry= "+store;
+        document.getElementById('input2').innerHTML=store;
+
+    }
+</script>
+</html>

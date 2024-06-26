@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function make(a, b, c) {
+        let obj = {};
+        a.forEach(function (val,val2) {               // val2 define index
+           obj[val]=b[val2]
+        })
+        console.log(obj);
+
+    }
+    make(['Name', 'Last Name', 'Age', 'Gender', 'Study'], ['Vikash', 'Modi', 23, 'Male', 'B.Sc'], 'Study')
+</script>
+
+</html>

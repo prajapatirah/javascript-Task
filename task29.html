@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellspacing="1" cellpadding="20">
+        <tr>
+            <td>Maths</td>
+            <td>Sci</td>
+            <td>Eng</td>
+            <td>Hindi</td>
+            <td>Total</td>
+            <td>Per(%)</td>
+            <td>Grade</td>
+            <td>Result</td>
+        </tr>
+        <tr>
+            <td id="a1"></td>
+            <td id="a2"></td>
+            <td id="a3"></td>
+            <td id="a4"></td>
+            <td id="a5"></td>
+            <td id="a6"></td>
+            <td id="a7"></td>
+            <td id="a8"></td>
+        </tr>
+    </table><br><br>
+    <button onclick="make()">Enter Marks</button>
+    
+</body>
+<script>
+    function make(){
+        let maths=Number(prompt ())
+        let sci=Number(prompt ())
+        let eng=Number(prompt())
+        let hindi=Number(prompt())
+        document.getElementById('a1').innerHTML=maths
+        document.getElementById('a2').innerHTML=sci
+        document.getElementById('a3').innerHTML=eng
+        document.getElementById('a4').innerHTML=hindi
+        total=maths+sci+eng+hindi
+        document.getElementById('a5').innerHTML=total+"/400"
+        document.getElementById('a6').innerHTML=total/4
+        if((total/4>=90)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="A+"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((total/4<90 && total/4>80) && (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="A"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((total/4<=80 && total/4>70)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="B+"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((total/4<=70 && total/4>60)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="B"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((total/4<=60 && total/4>50)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="C"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((total/4<=50 && total/4>=33)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="D"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((total/4<33)|| (maths<33 && sci<33 && eng<33 && hindi<33 )){
+        document.getElementById('a7').innerHTML="--"
+        document.getElementById('a8').innerHTML="Fail"
+        }
+    }
+</script>
+</html>

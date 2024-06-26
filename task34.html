@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table  border="1" cellspacing="0" cellpadding="10" id="table">
+        <tr>
+            <td>No</td>
+            <td>Name</td>
+            <td>Maths</td>
+            <td>Sci</td>
+            <td>Eng</td>
+            <td>Hindi</td>
+            <td>Total</td>
+            <td>Per(%)</td>
+            <td>Grade</td>
+            <td>Result</td>
+        </tr>
+    </table><br><br>
+    <button onclick="tab()">Enter Marks</button>
+    
+</body>
+<script>
+    function tab(){
+        let no=Number(prompt('Enter Number'));
+        let name=prompt('Enter Name');
+        let maths=Number(prompt('Enter Maths Marks'));
+        let sci=Number(prompt('Enter Sci marks'));
+        let eng=Number(prompt('Enter Eng marks'));
+        let hindi=Number(prompt('Enter Hindi Marks'));
+
+         total=maths+sci+sci+eng+hindi
+         per=total/5
+         grade=''
+         result=''
+
+         if(per<=100 && per>=90){
+            grade="A+"
+            result='PASS'
+         }
+         else if(per<90 && per>=80){
+            grade="B+"
+            result='PASS'
+         }
+         else if(per<80 && per>=60){
+            grade="B"
+            result='PASS'
+         }
+         else if(per<60 && per>=50){
+            grade="B"
+            result='PASS'
+         }
+         else if(per<50 && per>=33){
+            grade="B"
+            result='PASS'
+         }
+         else if(per<33 && per>=0){
+            grade="--"
+            result='FAIL'
+         }
+         else{
+            alert('plsz Enter Valid Number')
+         }
+
+         document.getElementById('table').innerHTML+=`<tr>
+            <td>`+no+`</td>
+            <td>`+name+`</td>
+            <td>`+maths+`</td>
+            <td>`+sci+`</td>
+            <td>`+eng+`</td>
+            <td>`+hindi+`</td>
+            <td>`+total+`</td>
+            <td>`+per+"%"+`</td>
+            <td>`+grade+`</td>
+            <td>`+result+`</td></tr>`
+
+
+
+
+
+    }
+</script>
+</html>
